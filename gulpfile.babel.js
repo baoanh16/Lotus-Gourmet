@@ -40,7 +40,7 @@ const paths = {
 	styles: {
 		src: 'lib/main.sass',
 		allSrc: 'lib/**/*.sass',
-		dest: 'dist/css/',
+		dest: 'dist/styles/',
 	},
 	templates: {
 		src: 'templates/*.pug',
