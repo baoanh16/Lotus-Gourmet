@@ -62,11 +62,11 @@ export {
 // Copy Images from Source to Dist
 export function copyImages() {
 	return gulp.src(paths.images.src)
-		.pipe(imagemin({
-			interlaced: true,
-			progressive: true,
-			optimizationLevel: 5,
-		}))
+		// .pipe(imagemin({
+		// 	interlaced: true,
+		// 	progressive: true,
+		// 	optimizationLevel: 5,
+		// }))
 		.pipe(gulp.dest(paths.images.dest))
 }
 
