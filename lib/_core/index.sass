@@ -7,3 +7,22 @@ html, body
 	font-size: 14px
 	line-height: 1.5
 	font-weight: 400
+
+
+@media (min-width: 1360px)
+	.container
+		max-width: 1260px
+
+.container
+	padding: 0 10px
+
+[class*=col-]
+	padding: 0 10px
+	
+.row
+	margin: 0 -10px
+	&.no-gutters
+		margin: 0 0px
+		[class*=col-]
+			padding: 0 0px
+
