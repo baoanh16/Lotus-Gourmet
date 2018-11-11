@@ -1,0 +1,146 @@
+.canhcam-header-1
+	position: sticky
+	top: 0
+	background-color: color-get($mau, main)
+	z-index: 101
+	.mobile
+		position: relative
+	.logo
+		padding: 10px
+		img
+			max-height: 60px
+	.toggle-navbar
+		display: flex
+		justify-content: center
+		align-items: center
+		position: absolute
+		right: 10px
+		top: 50%
+		transform: translateY(-50%)
+		z-index: 102
+		span
+			font-size: 24px
+			color: color-get($mau, white)
+	.navbar-wrap
+		position: fixed
+		background: white
+		top: 80px
+		left: 0
+		height: calc(100vh - 80px)
+		width: 100%
+		max-width: 375px
+		transform: translateX(-100%)
+		padding: 0 10px
+		.main-menu
+			padding: 0
+			.menu-list
+				flex-direction: column
+				align-items: flex-start
+				li
+					width: 100%
+					box-shadow: inset 0 -1px 0px 0px color-rgba(color-get($mau, main),.15)
+					a
+						display: block
+						padding: .75rem 0
+						font-size: r(16px)
+						font-weight: 500
+						color: color-get($mau, main)
+					&.active
+						box-shadow: inset 0 -2px 0px 0px color-rgba(color-get($mau, main),.5)
+						a
+							font-weight: 700
+	&.active
+		.navbar-wrap
+			transform: translateX(0)
+			box-shadow: 0 0 .5rem color-get($mau, main)
+		.toggle-navbar
+			span
+				&:before
+					content: '\f5ad'
+
+	+media-breakpoint-up(lg)
+		.mobile
+			display: none
+		.logo
+			padding: 10px 0
+		.navbar-wrap
+			position: initial
+			height: initial
+			background: none
+			transform: unset
+			display: flex
+			flex-direction: row
+			margin: 0 -10px
+			flex-wrap: wrap
+			max-width: 100%
+			padding: 0
+			align-items: center
+			.main-menu
+				flex-basis: 0
+				flex-grow: 1
+				max-width: 100%
+				.menu-list
+					padding: .5rem 3rem
+					flex-direction: row
+					li
+						width: initial
+						a
+							color: white
+							font-size: 15px
+							font-weight: 400
+						&.active, &:hover
+							box-shadow: inset 0 -2px 0px 0px white
+							a
+								text-decoration: none
+		.language
+			margin-left: auto
+			margin-right: r(24px)
+			a
+				color: white
+				font-size: r(13px)
+		.search
+			position: relative
+			.mdi
+				color: white
+				font-size: 18px
+			.searchbox
+				position: absolute
+				top: calc(100% + 26px)
+				right: 0
+				padding: 15px
+				background: color-get($mau, main)
+				display: flex
+				height: 60px
+				.searchinput
+					border: 0
+				.searchbutton
+					font-size: 0
+					border: 0
+					&:before
+						vertical-align: middle
+						content: "\F349"
+						display: inline-block
+						font: normal normal normal 24px/1 "Material Design Icons"
+						font-size: inherit
+						text-rendering: auto
+						line-height: inherit
+						-webkit-font-smoothing: antialiased
+						font-size: 20px
+						padding: 0 5px
+	+media-breakpoint-up(xl)
+		padding: 9px 0
+		.logo
+			min-width: r(190px)
+			padding: 0
+			img
+				position: absolute
+				max-height: 100px
+				left: 10px
+				top: 0
+		.navbar-wrap
+			.main-menu
+				.menu-list
+					padding: .5rem 120px .5rem 3rem
+					li
+						a
+							font-size: 18px

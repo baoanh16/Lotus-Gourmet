@@ -1,0 +1,95 @@
+.canhcam-footer-1
+	z-index: 99
+	position: relative
+	h4
+		font-size: r(16px)
+		font-weight: 600
+		text-transform: uppercase
+		margin-bottom: 2.25rem
+		color: white
+	.top-footer
+		background: color-get($mau, main)
+		padding: 4rem 0
+		.address
+			margin-bottom: 1rem
+			+media-breakpoint-up(lg)
+				margin-bottom: 1.6rem
+			p
+				font-size: r(13px)
+				color: rgba(255,255,255,.5)
+		.social-menu-list
+			margin-bottom: 2rem
+			+media-breakpoint-up(lg)
+				margin-bottom: 0
+			ul
+				display: flex
+				list-style-type: none
+				li
+					+ li
+						margin-left: 1rem
+		.footer-menu-list
+			ul
+				li
+					a
+						font-size: r(13px)
+						color: rgba(255,255,255,.5)
+						text-decoration: none
+	.bottom-footer
+		background: darken(color-get($mau, main), 6%)
+		padding: 1.6rem 0
+		.copyright-menu-list
+			margin-bottom: 1rem
+			+media-breakpoint-up(lg)
+				margin-bottom: 0
+			ul
+				display: flex
+				justify-content: center
+				flex-wrap: wrap
+				+media-breakpoint-up(lg)
+					justify-content: flex-start
+				li
+					a
+						font-size: r(12px)
+						color: white
+						opacity: .25
+						text-decoration: none
+					&:hover
+						a
+							opacity: 1
+					+ li
+						margin-left: 1rem
+						position: relative
+						&:before
+							content: ''
+							width: 4px
+							height: 1px
+							position: absolute
+							top: 50%
+							left: -.6rem
+							transform: translateY(-50%)
+							background: white
+							opacity: .25
+		.copyright-text
+			p
+				font-size: r(12px)
+				color: white
+				opacity: .25
+				text-align: center
+				+media-breakpoint-up(lg)
+					text-align: right
+				a
+					color: white
+	.bottom-logo
+		position: absolute
+		bottom: 1rem
+		left: 50%
+		transform: translateX(-50%)
+		display: none
+		+media-breakpoint-up(lg)
+			display: block
+			img
+				max-width: 60px
+		+media-breakpoint-up(xl)
+			img
+				max-width: 115px
+			

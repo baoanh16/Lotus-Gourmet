@@ -1,5 +1,34 @@
-header.canhcam-header-1
+header.canhcam-header-1#vhs_header
 	.container
-		.row.no-gutters
-			.col-12
-				p asd asd
+		.row.no-gutters.mobile
+			.logo
+				img(src="./img/logo_1.png", alt="")
+			.toggle-navbar
+				span.mdi.mdi-menu#vhs_toggleNavbar
+		.navbar-wrap
+			.logo.d-none.d-lg-block
+				img(src="./img/logo_1.png", alt="")
+			.main-menu
+				ul.navbar.list-unstyled.menu-list
+					li
+						a(href="#") About Us
+					li
+						a(href="#") Our Brands
+					li.active
+						a(href="#") Gallery
+					li
+						a(href="#") Distribution
+					li
+						a(href="#") Testimonial
+					li
+						a(href="#") News
+					li
+						a(href="#") Contact
+			.language.d-none.d-lg-block(map-to="language")
+				a(href="#") EN
+			.search.d-none.d-lg-block(map-to="search")
+				span.mdi.mdi-magnify
+				.Module
+					.searchbox
+						input.searchinput(type="text")
+						button.searchbutton Tìm kiếm
