@@ -1,18 +1,60 @@
 .vhs-home-1
 	.owl-carousel
 		.owl-dots
-			display: flex
-			flex-direction: column
-			position: absolute
-			right: 25%
-			top: 50%
-			z-index: 100
-			width: 16px
-			height: 100px
+			text-align: center
+			margin-top: 1rem
 			.owl-dot
+				margin: 5px .5rem
 				span
 					display: block
-					width: 16px
-					height: 16px
-					border: 2px solid white
+					width: 1rem
+					height: 1rem
 					border-radius: 50%
+					background: color-get($mau, main)
+				&.active
+					span
+						position: relative
+						&:before
+							content: ''
+							width: 20px
+							height: 20px
+							border-radius: 50%
+							border: 1px solid color-get($mau, main)
+							position: absolute
+							top: 50%
+							left: 50%
+							transform: translate(-50%,-50%)
+				&:focus, &:active
+					outline: none
+			+media-breakpoint-up(lg)
+				display: flex
+				flex-direction: column
+				position: absolute
+				right: 15%
+				top: 50%
+				z-index: 100
+				width: 16px
+				height: 100px
+				margin-top: 0
+				.owl-dot
+					margin: 5px 0
+					span
+						display: block
+						width: 10px
+						height: 10px
+						border-radius: 50%
+						background: rgba(255,255,255,.5)
+					&.active
+						span
+							position: relative
+							background: rgba(255,255,255,1)
+							&:before
+								content: ''
+								width: 16px
+								height: 16px
+								border-radius: 50%
+								border: 2px solid rgba(255,255,255,.5)
+								position: absolute
+								top: 50%
+								left: 50%
+								transform: translate(-50%,-50%)

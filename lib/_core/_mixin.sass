@@ -1,2 +1,14 @@
 @function r($size)
 	@return ($size/14px)*1rem
+
+
+@function mbTitle($size)
+	$ratio: 48px / 42px
+	@return $size / $ratio
+
+=line($line)
+	display: -webkit-box
+	text-overflow: ellipsis
+	-webkit-line-clamp: 2
+	overflow: hidden
+	-webkit-box-orient: vertical

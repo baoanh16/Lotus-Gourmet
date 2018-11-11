@@ -101,6 +101,9 @@ export function pugProcess() {
 	return gulp.src(paths.templates.src)
 		.pipe(pug())
 		.pipe(gulp.dest(paths.templates.dest))
+		.pipe(browserSync.stream({
+			match: "/dist"
+		}));
 }
 
 export function sassProcess() {
@@ -140,11 +143,12 @@ function watchDist() {
 	})
 	gulp.watch('plugins.json', gulp.parallel(concatCss, concatJs))
 	gulp.watch(paths.images.src, gulp.series(cleanImg, copyImages))
-	gulp.watch(paths.styles.allSrc, sassProcess).on('change', browserSync.reload)
-	gulp.watch(paths.scripts.allSrc, jsProcess).on('change', browserSync.reload)
-	gulp.watch('templates/**/*.pug', pugProcess).on('change', browserSync.reload)
-	gulp.watch(paths.templates.allSrc, pugProcess).on('change', browserSync.reload)
-	gulp.watch(paths.templates.src, pugProcess).on('change', browserSync.reload)
+	gulp.watch(paths.styles.allSrc, sassProcess)
+	gulp.watch(paths.scripts.allSrc, jsProcess)
+	gulp.watch('templates/**/*.pug', pugProcess)
+	gulp.watch(paths.templates.allSrc, pugProcess)
+	gulp.watch(paths.templates.src, pugProcess)
+	gulp.watch(paths.dist).on('change', browserSync.reload)
 }
 
 const build = gulp.series(

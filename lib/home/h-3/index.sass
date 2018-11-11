@@ -1,0 +1,61 @@
+.vhs-home-3
+	background-image: url('../img/home/bg_2.png')
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	position: relative
+	padding-top: 60px
+	padding-bottom: 100px
+	+media-breakpoint-up(lg)
+		padding-top: r(100px)
+		padding-bottom: r(200px)
+	+media-breakpoint-up(xl)
+		padding-top: r(140px)
+		padding-bottom: r(295px)
+	.content
+		.text
+			box-shadow: inset 0 0 0 2px color-get($mau, vang-2)
+			text-align: center
+			background: white
+			position: relative
+			padding: 1.75rem 1.5rem
+			p
+				font-size: r(15px)
+				font-weight: 300
+				color: color-get($mau, main)
+				text-align: justify
+			h3
+				font-size: r(16px)
+				font-weight: 600
+				font-style: italic
+				color: color-get($mau, main)
+				position: relative
+				margin-top: r(60px)
+				&:before
+					content: ''
+					height: r(25px)
+					width: 1px
+					background: color-get($mau, main)
+					position: absolute
+					left: 50%
+					bottom: 2.75rem
+			img
+				display: none
+			+media-breakpoint-up(lg)
+				padding: 2rem
+				p
+					font-size: r(20px)
+					text-align: center
+				h3
+					font-size: r(18px)
+					margin-top: r(90px)
+					&:before
+						height: r(40px)
+						bottom: 3rem
+				img
+					display: block
+					position: absolute
+					top: 14%
+					left: -35px
+			+media-breakpoint-up(xl)
+				padding: 3rem r(110px)

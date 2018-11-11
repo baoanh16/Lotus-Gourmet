@@ -1,13 +1,17 @@
 p ,ul ,h1,h2,h3,h4,h5,h6,figure,div, *
 	margin: 0
 	padding: 0
-	transition: all .3s ease-in-out
+
 html, body
-	font-family: 'Cabin', sans-serif
+	// font-family: 'Cabin', sans-serif
+	font-family: 'Montserrat', sans-serif
 	font-size: 14px
 	line-height: 1.5
 	font-weight: 400
 
+main
+	overflow: 
+	
 @media (min-width: 1360px)
 	.container
 		max-width: 1260px
@@ -25,3 +29,48 @@ html, body
 		[class*=col-]
 			padding: 0 0px
 
+.main-title
+	text-transform: capitalize
+	color: color-get($mau, main)
+	font-size: r(32px)
+	font-weight: 500
+	margin-bottom: mbTitle(32px)
+	+media-breakpoint-up(lg)
+		font-size: r(40px)
+		margin-bottom: mbTitle(40px)
+	+media-breakpoint-up(xl)
+		font-size: r(48px)
+		margin-bottom: mbTitle(48px)
+	&.center
+		text-align: center
+	&.white
+		color: white
+
+img
+	max-width: 100%
+
+
+.btn-red
+	background: color-get($mau,do-3)
+	padding: .5rem .75rem
+	font-size: r(14px)
+	font-weight: 700
+	line-height: 1
+	color: white
+	position: relative
+	+media-breakpoint-up(lg)
+		padding: .5rem .75rem
+		font-size: r(16px)
+	&:before
+		content: ''
+		position: absolute
+		width: 0
+		height: 100%
+		right: 0
+		top: 0
+		background: color-rgba(white,.15)
+		transition: all .3s ease-in-out
+	&:hover
+		color: white
+		&:before
+			width: 100%
