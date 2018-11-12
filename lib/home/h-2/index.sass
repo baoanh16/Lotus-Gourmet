@@ -1,67 +1,61 @@
 .vhs-home-2
-	padding: r(45px) 0
+	background-image: url('../img/home/bg_2.png')
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	position: relative
+	padding-top: 60px
+	padding-bottom: 100px
 	+media-breakpoint-up(lg)
-		padding: r(90px) 0
+		padding-top: r(100px)
+		padding-bottom: r(200px)
+	+media-breakpoint-up(xl)
+		padding-top: r(140px)
+		padding-bottom: r(295px)
 	.content
-		position: relative
-		.img
-			display: none
-			img
-				width: 100%
-			.icon-bottom-left
-				display: none
-			.icon-bottom-right
-				display: none
-			+media-breakpoint-up(lg)
-				display: block
-				.icon-bottom-left
-					display: block
-					position: absolute
-					bottom: -40px
-					left: -90px
-				.icon-bottom-right
-					position: absolute
-					display: block
-					right: -30px
-					bottom: -50px
 		.text
+			box-shadow: inset 0 0 0 2px color-get($mau, vang-2)
 			text-align: center
-			.line-top
-				margin-bottom: 1rem
-			.line-bottom
-				margin-top: 1rem
-			h3
-				margin-bottom: 1.5rem
-				font-size: r(22px)
+			background: white
+			position: relative
+			padding: 1.75rem 1.5rem
 			p
-				font-size: 1rem
+				font-size: r(15px)
 				font-weight: 300
+				color: color-get($mau, main)
 				text-align: justify
-			.btn-red
-				margin-top: 1.5rem
+			h3
+				font-size: r(16px)
+				font-weight: 600
+				font-style: italic
+				color: color-get($mau, main)
+				position: relative
+				margin-top: r(60px)
+				&:before
+					content: ''
+					height: r(25px)
+					width: 1px
+					background: color-get($mau, main)
+					position: absolute
+					left: 50%
+					bottom: 2.75rem
+			img
+				display: none
 			+media-breakpoint-up(lg)
-				position: absolute
-				top: 0
-				left: 0
-				width: 100%
-				height: 100%
-				padding: 1rem calc(100% / 12)
-				display: flex
-				justify-content: center
-				flex-direction: column
-				align-items: center
-				h3
-					margin-bottom: 2rem
-					font-size: r(30px)
-					padding: 0 50px
+				padding: 2rem
 				p
-					font-size: r(16px)
+					font-size: r(20px)
 					text-align: center
-				.btn-red
-					margin-top: 1.75rem
-			+media-breakpoint-up(xl)
-				padding: 1rem calc(100% / 6)
 				h3
-					font-size: r(36px)
-				.btn-red
-					margin-top: 2rem
+					font-size: r(18px)
+					margin-top: r(90px)
+					&:before
+						height: r(40px)
+						bottom: 3rem
+				img
+					display: block
+					position: absolute
+					top: 14%
+					left: -35px
+			+media-breakpoint-up(xl)
+				padding: 3rem r(110px)

@@ -82,10 +82,16 @@ export function copyFonts2() {
 		.pipe(gulp.dest(paths.webfonts.dest))
 }
 
+export function copyFonts3() {
+	return gulp.src(paths.fonts.src)
+		.pipe(gulp.dest(paths.styles.dest+ '/fonts'))
+}
+
 export function concatCss() {
 	let plugins = JSON.parse(readFileSync('./plugins.json'));
 	return gulp.src(plugins.styles)
 		.pipe(concat('core.min.css'))
+		.pipe(cleanCSS())
 		.pipe(gulp.dest(paths.styles.dest))
 }
 
@@ -141,7 +147,7 @@ function watchDist() {
 		},
 		port: 9999,
 	})
-	gulp.watch('plugins.json', gulp.parallel(concatCss, concatJs))
+	gulp.watch('plugins.json', gulp.series(concatCss, concatJs))
 	gulp.watch(paths.images.src, gulp.series(cleanImg, copyImages))
 	gulp.watch(paths.styles.allSrc, sassProcess)
 	gulp.watch(paths.scripts.allSrc, jsProcess)
@@ -156,13 +162,12 @@ const build = gulp.series(
 	copyImages,
 	copyFonts1,
 	copyFonts2,
-	gulp.parallel(
-		concatCss,
-		concatJs),
-	gulp.parallel(
-		jsProcess,
-		sassProcess,
-		pugProcess),
+	copyFonts3,
+	concatCss,
+	concatJs,
+	jsProcess,
+	sassProcess,
+	pugProcess,
 	watchDist)
 export {
 	build

@@ -1,0 +1,58 @@
+.vhs-about-3
+	background-image: url('../img/about/bg_2.jpg')
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	// background-attachment: fixed
+	padding: r(45px) 0 r(60px) 0
+	.content
+		.item
+			display: flex
+			// margin-bottom: 4rem
+			margin-bottom: 2rem
+			.number
+				// font-size: r(100px)
+				font-size: r(60px)
+				font-weight: 700
+				color: color-rgba(white,.9)
+				line-height: 0.8
+				flex: 0 0 70px
+				text-align: center
+				display: none
+			.img
+				flex: 0 0 70px
+				padding-right: 1rem
+				img
+					width: 100%
+			.content-title
+				text-transform: uppercase
+				font-weight: 700
+				// font-size: r(22px)
+				font-size: r(16px)
+				color: color-get($mau, main)
+			.desc
+				font-size: r(15px)
+				color: darken(white, 80%)
+				text-shadow: 0 0 1rem white
+	+media-breakpoint-up(lg)
+		padding: r(75px) 0 r(115px) 0
+		.content
+			padding-top: 2rem
+			.item
+				.number
+					font-size: r(80px)
+					display: block
+				.img
+					display: none
+				.content-title
+					font-size: r(19px)
+	+media-breakpoint-up(xl)
+		padding: r(105px) 0 r(170px) 0
+		.content
+			.item
+				margin-bottom: 3rem
+				.number
+					font-size: r(100px)
+				.content-title
+					font-size: r(22px)
+

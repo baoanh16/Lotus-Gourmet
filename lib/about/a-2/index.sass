@@ -1,0 +1,95 @@
+.vhs-about-2
+	padding: r(45px) 0 r(60px) 0
+	.item
+		+ .item
+			margin-top: r(45px)
+	.col-about
+		width: 100%
+		.img
+			img
+				width: 100%
+		.content
+			// padding: 0 30px
+			padding: 2rem 0 0 0
+			display: flex
+			flex-direction: column
+			justify-content: center
+			height: 100%
+			.content-title
+				font-size: r(20px)
+				font-weight: 600
+				color: color-get($mau, do-1)
+				text-transform: uppercase
+				position: relative
+				margin-bottom: 2.5rem
+				&:before
+					content: ''
+					width: 60px
+					height: 1px
+					background: color-get($mau, do-1)
+					position: absolute
+					left: 0
+					bottom: -.5rem
+			.desc
+				font-size: r(13px)
+			.desc-list
+				list-style-type: none
+				li
+					position: relative
+					padding-left: r(21px)
+					font-size: r(13px)
+					&:before
+						content: ''
+						position: absolute
+						width: 8px
+						height: 8px
+						left: 0
+						top: 6px
+						background: darken(white, 80%)
+						border-radius: 50%
+	+media-breakpoint-up(md)
+		.col-about
+			.content
+				.conetnt-title
+					font-size: r(24px)
+				.desc
+					font-size: 1rem
+				.desc-list
+					li
+						font-size: 1rem
+
+	+media-breakpoint-up(lg)
+		padding: r(67px) 0 r(90px) 0
+		.item
+			+ .item
+				margin-top: r(67px)
+		.col-about
+			&.long
+				max-width: calc(50% + 10px)
+				flex: 0 0 calc(50% + 10px)
+			&.short
+				max-width: calc(50% - 10px)
+				flex: 0 0 calc(50% - 10px)
+			.content
+				padding: 0 30px
+				.conetnt-title
+					font-size: r(26px)
+				.desc
+					font-size: r(15px)
+				.desc-list
+					li
+						font-size: r(15px)
+	+media-breakpoint-up(xl)
+		padding: r(90px) 0 r(120px) 0
+		.item
+			+ .item
+				margin-top: r(90px)
+		.col-about
+			.content
+				.conetnt-title
+					font-size: r(30px)
+				.desc
+					font-size: r(16px)
+				.desc-list
+					li
+						font-size: r(16px)

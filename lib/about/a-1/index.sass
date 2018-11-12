@@ -1,0 +1,72 @@
+.vhs-about-1
+	background-color: color-get($mau, vang-1)
+	padding: r(45px) 0
+	+media-breakpoint-up(lg)
+		padding: r(110px) 0
+	.content
+		position: relative
+		.img
+			display: none
+			img
+				width: 100%
+			.icon-bottom-left
+				display: none
+			.icon-bottom-right
+				display: none
+			+media-breakpoint-up(lg)
+				display: block
+				.icon-bottom-left
+					display: block
+					position: absolute
+					bottom: -40px
+					left: -90px
+				.icon-bottom-right
+					position: absolute
+					display: block
+					right: -30px
+					bottom: -50px
+		.text
+			text-align: center
+			.line-top
+				margin-bottom: 1rem
+			.line-bottom
+				margin-top: 1rem
+			h3
+				margin-bottom: 1.5rem
+				font-size: r(22px)
+				font-family: 'Cabin', sans-serif
+				font-weight: 400
+			p
+				font-size: 1rem
+				font-weight: 300
+				text-align: justify
+			.btn-red
+				margin-top: 1.5rem
+			+media-breakpoint-up(lg)
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				padding: 1rem calc(100% / 12)
+				display: flex
+				justify-content: center
+				flex-direction: column
+				align-items: center
+				h3
+					margin-bottom: 2rem
+					font-size: r(24px)
+					padding: 0 50px
+				p
+					text-align: center
+				.btn-red
+					margin-top: 1.75rem
+			+media-breakpoint-up(xl)
+				padding: 1rem calc(100% / 12)
+				p
+					font-size: r(16px)
+				h3
+					font-size: r(36px)
+					padding: 0 80px
+				.btn-red
+					margin-top: 2rem

@@ -1,0 +1,70 @@
+.vhs-news-detail-1
+	padding: r(45px) 0
+	+media-breakpoint-up(lg)
+		padding: r(60px) 0
+	.content
+		h2
+			font-size: r(22px)
+			color: color-get($mau, main)
+			font-weight: 600
+			margin-bottom: .85rem
+			+media-breakpoint-up(lg)
+				margin-bottom: 1.3rem
+				font-size: r(30px)
+		time
+			font-size: r(13px)
+			font-weight: 300
+			display: block
+			margin-bottom: 1rem
+			color: lighten(black, 40%)
+			+media-breakpoint-up(lg)
+				font-size: r(16px)
+				margin-bottom: 1.75rem
+		p
+			font-size: r(13px)
+			font-weight: 300
+			margin-bottom: 1rem
+			color: lighten(black, 20%)
+			+media-breakpoint-up(lg)
+				font-size: r(16px)
+				margin-bottom: 1.75rem
+		img
+			margin-bottom: 3rem
+			max-width: calc(100% - 6rem)
+			margin-left: auto
+			margin-right: auto
+			display: block
+	.other-news
+		padding-top: .3rem
+		h3
+			font-size: r(18px)
+			font-weight: 600
+			text-transform: capitalize
+			color: color-get($mau, main)
+			margin-bottom: .85rem
+			+media-breakpoint-up(lg)
+				margin-bottom: 1.3rem
+				font-size: r(24px)
+		.item
+			color: lighten(black, 40%)
+			text-decoration: none
+			figure
+				padding: r(20px) 0
+				display: flex
+				border-bottom: 1px dashed darken(white, 44%)
+				.img
+					padding-right: 20px
+				figcaption
+					time
+						font-weight: 300
+						font-size: r(12px)
+						display: block
+						margin-bottom: 1rem
+					h4
+						font-size: 1rem
+						font-weight: 400
+						+media-breakpoint-up(lg)
+							+line(3)
+						+media-breakpoint-up(xl)
+							+line(4)
+							

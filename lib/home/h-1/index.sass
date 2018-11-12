@@ -1,60 +1,69 @@
 .vhs-home-1
-	.owl-carousel
-		.owl-dots
-			text-align: center
-			margin-top: 1rem
-			.owl-dot
-				margin: 5px .5rem
-				span
-					display: block
-					width: 1rem
-					height: 1rem
-					border-radius: 50%
-					background: color-get($mau, main)
-				&.active
-					span
-						position: relative
-						&:before
-							content: ''
-							width: 20px
-							height: 20px
-							border-radius: 50%
-							border: 1px solid color-get($mau, main)
-							position: absolute
-							top: 50%
-							left: 50%
-							transform: translate(-50%,-50%)
-				&:focus, &:active
-					outline: none
+	padding: r(45px) 0
+	+media-breakpoint-up(lg)
+		padding: r(90px) 0
+	.content
+		position: relative
+		.img
+			display: none
+			img
+				width: 100%
+			.icon-bottom-left
+				display: none
+			.icon-bottom-right
+				display: none
 			+media-breakpoint-up(lg)
-				display: flex
-				flex-direction: column
+				display: block
+				.icon-bottom-left
+					display: block
+					position: absolute
+					bottom: -40px
+					left: -90px
+				.icon-bottom-right
+					position: absolute
+					display: block
+					right: -30px
+					bottom: -50px
+		.text
+			text-align: center
+			.line-top
+				margin-bottom: 1rem
+			.line-bottom
+				margin-top: 1rem
+			h3
+				margin-bottom: 1.5rem
+				font-size: r(22px)
+				font-family: 'Cabin', sans-serif
+				font-weight: 400
+			p
+				font-size: 1rem
+				font-weight: 300
+				text-align: justify
+			.btn-red
+				margin-top: 1.5rem
+			+media-breakpoint-up(lg)
 				position: absolute
-				right: 15%
-				top: 50%
-				z-index: 100
-				width: 16px
-				height: 100px
-				margin-top: 0
-				.owl-dot
-					margin: 5px 0
-					span
-						display: block
-						width: 10px
-						height: 10px
-						border-radius: 50%
-						background: rgba(255,255,255,.5)
-					&.active
-						span
-							position: relative
-							background: rgba(255,255,255,1)
-							&:before
-								content: ''
-								width: 16px
-								height: 16px
-								border-radius: 50%
-								border: 2px solid rgba(255,255,255,.5)
-								position: absolute
-								top: 50%
-								left: 50%
-								transform: translate(-50%,-50%)
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				padding: 1rem calc(100% / 12)
+				display: flex
+				justify-content: center
+				flex-direction: column
+				align-items: center
+				h3
+					margin-bottom: 2rem
+					font-size: r(30px)
+					padding: 0 50px
+				p
+					font-size: r(16px)
+					text-align: center
+				.btn-red
+					margin-top: 1.75rem
+			+media-breakpoint-up(xl)
+				padding: 1rem calc(100% / 10)
+				h3
+					font-size: r(36px)
+				.btn-red
+					margin-top: 2rem
