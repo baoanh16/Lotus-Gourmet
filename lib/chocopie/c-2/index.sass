@@ -1,9 +1,10 @@
 .chocopie-2
 	padding-top: 2rem
 	padding-bottom: 2rem
+	position: relative
 	+media-breakpoint-up(lg)
-		padding-top: 4rem
-		padding-bottom: 4rem
+		padding-top: r(60px)
+		padding-bottom: r(60px)
 
 .block1
 	&__title
@@ -14,6 +15,8 @@
 			text-transform: uppercase
 			+media-breakpoint-up(md)
 				font-size: r(32px)
+			+media-breakpoint-up(lg)
+				font-size: r(48px)
 		&--right
 			text-align: right
 		&--left
@@ -24,12 +27,19 @@
 	&__box
 		background-color: #fffbf0
 		padding: 3rem
+		+media-breakpoint-up(lg)
+			padding-top: r(75px)
+			padding-right: r(75px)
+			padding-left: r(150px)
+			padding-bottom: r(150px)
 		p
 			font-size: r(13px)
 			font-weight: 300
 			color: #666666
 			+media-breakpoint-up(md)
 				font-size: r(16px)
+			+media-breakpoint-up(lg)
+				font-size: r(18px)
 		ul
 			list-style: none
 			margin: 0
@@ -43,7 +53,7 @@
 				&:before
 					position: absolute
 					content: ' '
-					top: 20%
+					top: 6px
 					left: -1rem
 					z-index: 1
 					background-color: #49261f
@@ -53,11 +63,37 @@
 					+media-breakpoint-up(md)
 						width: r(7px)
 						height: r(7px)
-						top: 50%
+						top: 10px
 						left: -1.5rem
-						transform: translateY(-50%)
+				+media-breakpoint-up(lg)
+					margin-bottom: r(45px)
+					&:last-child
+						margin-bottom: 0
 	
 	&__image
 		display: none
+		+media-breakpoint-up(lg)
+			display: block
+			img
+				position: absolute
+				z-index: 1
+				left: 0
+				bottom: 0
+				height: 75%
+		+media-breakpoint-up(xl)
+			img
+				left: calc((100% - 1140px)/2)
 	&__thumbnail
 		display: none
+		+media-breakpoint-up(lg)
+			display: block
+			img
+				position: absolute
+				bottom: 0
+				right: 0
+				z-index: 1
+				height: 35%
+		+media-breakpoint-up(xl)
+			img
+				right: calc((100% - 1140px)/4)
+				height: 40%
