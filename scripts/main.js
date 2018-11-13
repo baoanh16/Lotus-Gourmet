@@ -130,4 +130,64 @@ $(document).ready(function () {
 			}
 		}
 	})
+
+	// Slide Trang Our Brand
+	$(".vhs-brand-2 .brand-detail .owl-carousel").owlCarousel({
+		items: 1,
+		animateIn: 'zoomIn',
+		mouseDrag: false,
+		dots: false,
+		// loop: true,
+	});
+	$(".vhs-brand-2 .brand-nav .owl-carousel").owlCarousel({
+		items: 3,
+		center: true,
+		loop: true,
+		// autoplay: true,
+		smartSpeed: 500,
+		autoplayTimeout: 4000,
+		autoplaySpeed: 500,
+		margin: 30,
+		responsive: {
+			576: {
+				items: 3
+			},
+			992: {
+				items: 5,
+			}
+		}
+	}).on('changed.owl.carousel', function(e){
+		var current = e.item.index;
+		$(".vhs-brand-2 .brand-detail .owl-carousel").trigger("to.owl.carousel", current%5);
+		$(".vhs-brand-2 .brand-nav .owl-carousel").trigger("to.owl.carousel", current);
+	})
+	$(".vhs-brand-2 .brand-nav .owl-carousel .owl-item").on('click', function(){
+		var n = $(this).index()
+		$(".vhs-brand-2 .brand-detail .owl-carousel").trigger("to.owl.carousel", n);
+		$(".vhs-brand-2 .brand-nav .owl-carousel").trigger("to.owl.carousel", n);
+	})
+
+
+	// Slide Trang Testimonial
+	$(".vhs-testimonial-1 .owl-carousel").owlCarousel({
+		items: 3,
+		center: true,
+		margin: -50,
+		autoplay: true,
+		smartSpeed: 700,
+		autoplaySpeed: 2000,
+		autoplayTimeout: 4000,
+		loop: true,
+		stagePadding: 0,
+		navs: true,
+	}).on('initialize.owl.carousel changed.owl.carousel refreshed.owl.carousel', function(e){
+		let item = e.item.index
+		setTimeout(function(){
+			$(".vhs-testimonial-1 .owl-carousel .owl-item .item").removeClass('prev').removeClass('next')
+			$(".vhs-testimonial-1 .owl-carousel .owl-item").eq(item-1).find('.item').addClass('prev')
+			// $(".vhs-testimonial-1 .owl-carousel .owl-item").eq(item).addClass('')
+			$(".vhs-testimonial-1 .owl-carousel .owl-item").eq(item+1).find('.item').addClass('next')
+		},300)
+	})
+	
 });
