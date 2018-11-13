@@ -1,0 +1,92 @@
+.vhs-brand-2
+	background: color-get($mau, do-6)
+	padding-top: r(80px)
+	padding-bottom: r(45px)
+	
+	.brand-detail
+		text-align: center
+		.item
+			figure
+				figcaption
+					h4
+						font-size: r(22px)
+						+media-breakpoint-up(lg)
+							font-size: r(30px)
+						color: white
+						margin-bottom: 1rem
+					p
+						font-size: r(15px)
+						+media-breakpoint-up(lg)
+							font-size: r(18px)
+						font-weight: 200
+						color: white
+						margin-bottom: 2rem
+					.btn-viewmore
+						font-size: r(18px)
+						color: white
+						position: relative
+						&:before
+							content: ''
+							width: 18px
+							height: 8px
+							position: absolute
+							top: 50%
+							transform: translateY(-50%)
+							background: url('../img/viewmore_left.png') no-repeat
+							background-size: cover
+							right: 100%
+						&:after
+							content: ''
+							width: 18px
+							height: 8px
+							position: absolute
+							top: 50%
+							transform: translateY(-50%)
+							background: url('../img/viewmore_right.png') no-repeat
+							background-size: cover
+							left: 100%
+	.brand-nav
+		.owl-carousel
+			.owl-stage-outer
+				padding-top: 50px
+				.owl-item
+					.item
+						text-decoration: none
+						figure
+							position: relative
+							&:before
+								content: ''
+								position: absolute
+								// top: -2rem
+								top: 0
+								width: 0
+								height: 0
+								border-left: 7px solid transparent
+								border-right: 7px solid transparent
+								border-bottom: 8px solid white
+								left: 50%
+								transform: translateX(-50%)
+								opacity: 0
+								transition: all .3s ease-in-out
+							.img-box
+								background: color-rgba(color-get($mau,cam-3),.7)
+							figcaption
+								padding-top: r(22px)
+								h4
+									color: color-rgba(white, .5)
+									font-weight: 300
+									font-size: r(15px)
+									text-align: center
+									+media-breakpoint-up(lg)
+										font-size: r(17px)
+					&.center
+						.item
+							figure
+								.img-box
+									background: none
+								figcaption
+									h4
+										color: white
+								&:before
+									opacity: 1
+									top: -2rem

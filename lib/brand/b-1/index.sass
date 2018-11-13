@@ -3,3 +3,22 @@
 	background-repeat: no-repeat
 	background-size: cover
 	background-position: center
+	padding: r(90px) 0 r(120px) 0
+	.content
+		background: white
+		padding: 2rem 1rem 8rem 1rem
+		+media-breakpoint-up(lg)
+			padding: 5rem r(50px) 5rem r(170px)
+		position: relative
+		p
+			font-size: r(16px)
+		img
+			position: absolute
+			transform: translate(-50%, -50%)
+			top: 100%
+			left: 50%
+			width: 180px
+			+media-breakpoint-up(lg)
+				top: 50%
+				left: 0
+				width: initial
