@@ -1,0 +1,49 @@
+.instantnoodle-2, .instantnoodle-3, .instantnoodle-4, .instantnoodle-5, .instantnoodle-6
+	padding-top: 2rem
+	padding-bottom: 2rem
+	background: #000
+	+media-breakpoint-up(lg)
+		padding-top: r(100px)
+		padding-bottom: r(50px)
+
+.block2
+	&--white
+		.block2__title
+			color: #ffffff
+		.block2__content
+			color: #ffffff
+	&--black
+		.block2__title
+			color: #000000
+		.block2__content
+			color: #000000
+	&__title
+		h1, h2, h3, h4, h5, h6
+			margin-bottom: 0
+			font-weight: 600
+			font-size: r(32px)
+			margin-bottom: 2rem
+			font-family: 'Cabin'
+			+media-breakpoint-up(md)
+				font-size: r(40px)
+				margin-bottom: 2rem
+			+media-breakpoint-up(lg)
+				font-size: r(42px)
+				margin-bottom: 2rem
+		&--uppercase
+			text-transform: uppercase
+	&__content
+		p
+			font-size: r(14px)
+			font-weight: 400
+			margin-bottom: 1rem
+			text-align: justify
+			+media-breakpoint-up(md)
+				font-size: r(16px)
+				text-align: left
+			+media-breakpoint-up(lg)
+				font-size: r(18px)
+		ul
+			margin-left: 1rem
+			p
+				margin-bottom: 0
