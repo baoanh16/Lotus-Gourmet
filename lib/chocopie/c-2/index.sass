@@ -4,7 +4,34 @@
 	position: relative
 	+media-breakpoint-up(lg)
 		padding-top: r(60px)
-		padding-bottom: r(60px)
+		padding-bottom: 8.28571rem
+
+
+.chocopie-3
+	padding-top: 2rem
+	padding-bottom: 2rem
+	position: relative
+	+media-breakpoint-up(lg)
+		padding-top: r(60px)
+		padding-bottom: 8.28571rem
+
+
+.chocopie-4
+	padding-top: 2rem
+	padding-bottom: 2rem
+	position: relative
+	+media-breakpoint-up(lg)
+		padding-top: r(60px)
+		padding-bottom: 8.28571rem
+
+
+.chocopie-5
+	padding-top: 2rem
+	padding-bottom: 2rem
+	position: relative
+	+media-breakpoint-up(lg)
+		padding-top: r(60px)
+		padding-bottom: 8.28571rem
 
 .block1
 	&__title
@@ -23,9 +50,12 @@
 			text-align: left
 		&--classic
 			color: #fffbf0
+		&--matcha
+			color: #b1cf73
+		&--coconut
+			color: #cc8f60
 
 	&__box
-		background-color: #fffbf0
 		padding: 3rem
 		+media-breakpoint-up(lg)
 			padding-top: r(75px)
@@ -35,7 +65,6 @@
 		p
 			font-size: r(13px)
 			font-weight: 300
-			color: #666666
 			+media-breakpoint-up(md)
 				font-size: r(16px)
 			+media-breakpoint-up(lg)
@@ -43,11 +72,12 @@
 		ul
 			list-style: none
 			margin: 0
-			margin-top: 1rem
+			margin-top: 1.5rem
 			padding-left: 1rem
 			+media-breakpoint-up(md)
 				padding-left: 1.5rem
 				margin-left: 3rem
+				margin-top: r(45px)
 			li
 				position: relative
 				&:before
@@ -56,7 +86,6 @@
 					top: 6px
 					left: -1rem
 					z-index: 1
-					background-color: #49261f
 					width: r(5px)
 					height: r(5px)
 					border-radius: 50%
@@ -68,8 +97,41 @@
 				+media-breakpoint-up(lg)
 					margin-bottom: r(45px)
 					&:last-child
-						margin-bottom: 0
-	
+						margin-bottom: 4rem
+		&__inlineimage
+			margin-top: 1.5rem
+			+media-breakpoint-up(sm)
+				transform: scale(.9)
+			img
+				max-width: 100%
+				height: auto
+			+media-breakpoint-up(lg)
+				display: none
+		&--classic
+			background-color: #fffbf0
+			p
+				color: #666666
+			ul
+				li
+					&:before
+						background-color: #49261f
+		&--matcha
+			background-color: #b1cf73
+			p
+				color: #fff
+			ul
+				li
+					&:before
+						background-color: #fff
+		&--coconut
+			background-color: #cc8f60
+			p
+				color: #fff
+			ul
+				li
+					&:before
+						background-color: #fff
+
 	&__image
 		display: none
 		+media-breakpoint-up(lg)
@@ -78,8 +140,8 @@
 				position: absolute
 				z-index: 1
 				left: 0
-				bottom: 0
-				height: 75%
+				bottom: 4rem
+				height: 65%
 		+media-breakpoint-up(xl)
 			img
 				left: calc((100% - 1140px)/2)
@@ -89,11 +151,43 @@
 			display: block
 			img
 				position: absolute
-				bottom: 0
+				bottom: 4rem
 				right: 0
 				z-index: 1
-				height: 35%
+				height: 25%
 		+media-breakpoint-up(xl)
 			img
 				right: calc((100% - 1140px)/4)
-				height: 40%
+				height: 30%
+
+	&--reverse
+		.block1__box
+			padding: 3rem
+			+media-breakpoint-up(lg)
+				padding-top: r(75px)
+				padding-right: r(160px)
+				padding-left: r(75px)
+				padding-bottom: r(150px)
+		.block1__image
+			+media-breakpoint-up(lg)
+				img
+					position: absolute
+					z-index: 1
+					left: 0
+					bottom: 4rem
+					height: 30%
+			+media-breakpoint-up(xl)
+				img
+					left: calc((100% - 1140px)/4)
+		.block1__thumbnail
+			+media-breakpoint-up(lg)
+				img
+					position: absolute
+					bottom: 4rem
+					right: 0
+					z-index: 1
+					height: 50%
+			+media-breakpoint-up(xl)
+				img
+					height: 60%
+					right: calc((100% - 1140px)/4)
