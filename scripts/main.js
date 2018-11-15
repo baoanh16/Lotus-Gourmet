@@ -7,6 +7,11 @@ document.getElementById("vhs_toggleNavbar").onclick = toggleMenu;
 // End Toggle Menu
 
 $(document).ready(function () {
+
+	$('.canhcam-header-1 .search .mdi').on('click', function(e){
+		e.stopPropagation();
+		$('.Module-141').slideToggle(300);
+	})
 	// Home - Banner
 	$('.vhs-banner-1 .owl-carousel').owlCarousel({
 		items: 1,
@@ -64,7 +69,7 @@ $(document).ready(function () {
 
 	$('.vhs-banner-2 .owl-carousel').owlCarousel({
 		items: 1,
-		loop: false,
+		loop: true,
 		dots: false,
 		autoplay: true,
 		smartSpeed: 1000,
@@ -72,6 +77,10 @@ $(document).ready(function () {
 		autoplayTimeout: 3000,
 	})
 
+
+
+	// Gallery Side menu
+	$('.gallery-side-menu .level-2 .active').parents('.has-child').addClass('active')
 	// Gallery slide
 	$('.vhs-gallery-1 .slide-nav .owl-carousel').owlCarousel({
 		items: 2,
@@ -142,7 +151,7 @@ $(document).ready(function () {
 	$(".vhs-brand-2 .brand-nav .owl-carousel").owlCarousel({
 		items: 3,
 		center: true,
-		loop: true,
+		loop: false,
 		// autoplay: true,
 		smartSpeed: 500,
 		autoplayTimeout: 4000,
@@ -158,7 +167,7 @@ $(document).ready(function () {
 		}
 	}).on('changed.owl.carousel', function(e){
 		var current = e.item.index;
-		$(".vhs-brand-2 .brand-detail .owl-carousel").trigger("to.owl.carousel", current%5);
+		$(".vhs-brand-2 .brand-detail .owl-carousel").trigger("to.owl.carousel", current % e.item.count);
 		$(".vhs-brand-2 .brand-nav .owl-carousel").trigger("to.owl.carousel", current);
 	})
 	$(".vhs-brand-2 .brand-nav .owl-carousel .owl-item").on('click', function(){
@@ -172,21 +181,22 @@ $(document).ready(function () {
 	$(".vhs-testimonial-1 .owl-carousel").owlCarousel({
 		items: 3,
 		center: true,
-		margin: -50,
-		autoplay: true,
+		margin: -125,
+		autoplay: false,
+		// autoplay: true,
 		smartSpeed: 700,
 		autoplaySpeed: 2000,
 		autoplayTimeout: 4000,
 		loop: true,
 		stagePadding: 0,
-		navs: true,
-	}).on('initialize.owl.carousel changed.owl.carousel refreshed.owl.carousel', function(e){
+		nav: true,
+	})
+	.on('changed.owl.carousel initialize.owl.carousel', function(e){
 		let item = e.item.index
 		setTimeout(function(){
-			$(".vhs-testimonial-1 .owl-carousel .owl-item .item").removeClass('prev').removeClass('next')
-			$(".vhs-testimonial-1 .owl-carousel .owl-item").eq(item-1).find('.item').addClass('prev')
-			// $(".vhs-testimonial-1 .owl-carousel .owl-item").eq(item).addClass('')
-			$(".vhs-testimonial-1 .owl-carousel .owl-item").eq(item+1).find('.item').addClass('next')
+			$(".vhs-testimonial-1 .owl-carousel .owl-item").removeClass('prev').removeClass('next')
+			$(".vhs-testimonial-1 .owl-carousel .owl-item").eq(item-1).addClass('prev')
+			$(".vhs-testimonial-1 .owl-carousel .owl-item").eq(item+1).addClass('next')
 		},300)
 	})
 	

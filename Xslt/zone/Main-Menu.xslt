@@ -4,23 +4,24 @@
 	<xsl:output method="html" indent="yes" />
 
 	<xsl:template match="/">
-		<xsl:apply-templates select="/LanguageList/Language"></xsl:apply-templates>
+		<ul class="navbar list-unstyled menu-list">
+			<xsl:apply-templates select="/ZoneList/Zone"></xsl:apply-templates>
+		</ul>
 	</xsl:template>
 
-	<xsl:template match="Language">
-		<a>
+	<xsl:template match="Zone">
+		<li>
 			<xsl:if test="IsActive='true'">
 				<xsl:attribute name="class">
-					<xsl:text>d-none</xsl:text>
+					<xsl:text>active</xsl:text>
 				</xsl:attribute>
 			</xsl:if>
-			<xsl:attribute name="href">
-				<xsl:value-of select="Url"></xsl:value-of>
-			</xsl:attribute>
-			<xsl:attribute name="title">
+			<a>
+				<xsl:attribute name="href">
+					<xsl:value-of select="Url"></xsl:value-of>
+				</xsl:attribute>
 				<xsl:value-of select="Title"></xsl:value-of>
-			</xsl:attribute>
-			<xsl:value-of select="Title"></xsl:value-of>
-		</a>
+			</a>
+		</li>
 	</xsl:template>
 </xsl:stylesheet>

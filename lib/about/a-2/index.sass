@@ -31,32 +31,34 @@
 					left: 0
 					bottom: -.5rem
 			.desc
-				font-size: r(13px)
-			.desc-list
-				list-style-type: none
-				li
-					position: relative
-					padding-left: r(21px)
+				p
 					font-size: r(13px)
-					&:before
-						content: ''
-						position: absolute
-						width: 8px
-						height: 8px
-						left: 0
-						top: 6px
-						background: darken(white, 80%)
-						border-radius: 50%
+				ul
+					list-style-type: none
+					li
+						position: relative
+						padding-left: r(21px)
+						font-size: r(13px)
+						&:before
+							content: ''
+							position: absolute
+							width: 8px
+							height: 8px
+							left: 0
+							top: 6px
+							background: darken(white, 80%)
+							border-radius: 50%
 	+media-breakpoint-up(md)
 		.col-about
 			.content
 				.conetnt-title
 					font-size: r(24px)
 				.desc
-					font-size: 1rem
-				.desc-list
-					li
+					p
 						font-size: 1rem
+					ul
+						li
+							font-size: 1rem
 
 	+media-breakpoint-up(lg)
 		padding: r(67px) 0 r(90px) 0
@@ -75,10 +77,11 @@
 				.conetnt-title
 					font-size: r(26px)
 				.desc
-					font-size: r(15px)
-				.desc-list
-					li
+					p
 						font-size: r(15px)
+					ul
+						li
+							font-size: r(15px)
 	+media-breakpoint-up(xl)
 		padding: r(90px) 0 r(120px) 0
 		.item
@@ -89,7 +92,8 @@
 				.conetnt-title
 					font-size: r(30px)
 				.desc
-					font-size: r(16px)
-				.desc-list
-					li
+					p
 						font-size: r(16px)
+					ul
+						li
+							font-size: r(16px)

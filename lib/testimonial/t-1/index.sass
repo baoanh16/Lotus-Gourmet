@@ -1,31 +1,29 @@
 .vhs-testimonial-1
+	padding: r(70px) 0
 	.owl-carousel
 		.owl-item
 			display: flex
 			align-items: center
 			justify-content: center
+			background: white
+			transition: all .3s ease-in-out
 			.item
+				transform: scale(.8)
 				opacity: 0
-				ransition: all .3s ease-in-out
+				transition: all .3s ease-in-out
 				figure
 					.img-box
 						border-radius: 50%
-						width: r(220px)
-						height: r(220px)
+						width: r(330px)
+						height: r(330px)
 						display: flex
 						align-items: center
 						justify-content: center
 						overflow: hidden
-						margin-right: auto
-						margin-left: auto
+						margin: auto
 						img
-							width: r(165px)
-							height: r(165px)
 							display: block
-							margin-right: auto
-							margin-left: auto
-							border-radius: 50%
-							overflow: hidden
+							width: 100%
 					figcaption
 						text-align: center
 						padding-top: 2rem
@@ -45,43 +43,29 @@
 							font-weight: 600
 							font-size: r(18px)
 							color: color-get($mau, do-2)
-			&.center
+			&.prev
 				.item
 					opacity: 1
-					position: relative
-					z-index: 60
-					figure
-						.img-box
-							width: r(330px)
-							height: r(330px)
-							img
-								border-radius: 0
-								width: 100%
-								height: 100%
-								// width: r(330px)
-								// height: r(330px)
-			.item.prev
-				opacity: .5
-				z-index: 40
+					transform: scale(.8)
+			&.next
+				.item
+					opacity: 1
+					transform: scale(.8)
+			&.center
+				z-index: 60
 				position: relative
-				&:after
+				.item
+					opacity: 1
+					transform: scale(1)
+				&:before, &:after
 					content: ''
 					position: absolute
 					top: 0
-					left: 0
 					width: 100%
 					height: 100%
-					background-image: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0))
-		
-			.item.next
-				opacity: .5
-				z-index: 40
-				position: relative
+				&:before
+					right: 100%
+					background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0.25))
 				&:after
-					content: ''
-					position: absolute
-					top: 0
-					left: 0
-					width: 100%
-					height: 100%
-					background-image: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0))
+					left: 100%
+					background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0.25))
