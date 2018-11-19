@@ -6,11 +6,15 @@
 			align-items: center
 			justify-content: center
 			background: white
-			transition: all .3s ease-in-out
+			z-index: 40
+			position: relative
 			.item
-				transform: scale(.8)
-				opacity: 0
 				transition: all .3s ease-in-out
+				&:before, &:after
+					z-index: 50
+				+media-breakpoint-up(md)
+					transform: scale(.8)
+					opacity: 0
 				figure
 					.img-box
 						border-radius: 50%
@@ -22,7 +26,6 @@
 						overflow: hidden
 						margin: auto
 						img
-							display: block
 							width: 100%
 					figcaption
 						text-align: center
@@ -43,20 +46,22 @@
 							font-weight: 600
 							font-size: r(18px)
 							color: color-get($mau, do-2)
-			&.prev
+			&.active
+				z-index: 45
+				position: relative
 				.item
-					opacity: 1
-					transform: scale(.8)
-			&.next
-				.item
-					opacity: 1
-					transform: scale(.8)
+					+media-breakpoint-up(md)
+						opacity: .5
+					&:before, &:after
+					z-index: 55
+					position: relative
 			&.center
 				z-index: 60
 				position: relative
 				.item
-					opacity: 1
-					transform: scale(1)
+					+media-breakpoint-up(md)
+						opacity: 1
+						transform: scale(1)
 				&:before, &:after
 					content: ''
 					position: absolute

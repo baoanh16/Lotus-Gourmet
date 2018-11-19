@@ -33,7 +33,7 @@ $(document).ready(function () {
 		dots: true,
 		margin: 20,
 		nav: true,
-		navText: ['<img src="../img/arrow-left.png">','<img src="../img/arrow-right.png">'],
+		navText: ['<img src="/Data/Sites/1/skins/default/img/arrow-left.png">','<img src="/Data/Sites/1/skins/default/img/arrow-right.png">'],
 		loop: true,
 		dots: false,
 		autoplay: true,
@@ -179,25 +179,26 @@ $(document).ready(function () {
 
 	// Slide Trang Testimonial
 	$(".vhs-testimonial-1 .owl-carousel").owlCarousel({
-		items: 3,
-		center: true,
-		margin: -125,
-		autoplay: false,
-		// autoplay: true,
-		smartSpeed: 700,
-		autoplaySpeed: 2000,
+		items: 1,
+		autoplay: true,
+		autoplaySpeed: 1000,
 		autoplayTimeout: 4000,
+		smartSpeed: 300,
 		loop: true,
-		stagePadding: 0,
-		nav: true,
+		responsive: {
+			768: {
+				items: 3,
+				margin: -50,
+				mouseDrag: false,
+				smartSpeed: 500,
+				center: true,
+			},
+			992: {
+				items: 3,
+				margin: -125,
+				smartSpeed: 700,
+				center: true,
+			}
+		}
 	})
-	.on('changed.owl.carousel initialize.owl.carousel', function(e){
-		let item = e.item.index
-		setTimeout(function(){
-			$(".vhs-testimonial-1 .owl-carousel .owl-item").removeClass('prev').removeClass('next')
-			$(".vhs-testimonial-1 .owl-carousel .owl-item").eq(item-1).addClass('prev')
-			$(".vhs-testimonial-1 .owl-carousel .owl-item").eq(item+1).addClass('next')
-		},300)
-	})
-	
 });

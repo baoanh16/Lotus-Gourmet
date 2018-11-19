@@ -12,16 +12,16 @@
 	</xsl:template>
 
 	<xsl:template match="Zone" mode="Level-1">
-		<li>
+		<li style="cursor: pointer">
 			<xsl:if test="count(Zone)>0">
 				<xsl:attribute name="class">
 					<xsl:text>has-child</xsl:text>
 				</xsl:attribute>
 			</xsl:if>
 			<a>
-				<xsl:attribute name="href">
+				<!-- <xsl:attribute name="href">
 					<xsl:value-of select="Url"></xsl:value-of>
-				</xsl:attribute>
+				</xsl:attribute> -->
 				<xsl:value-of select="Title"></xsl:value-of>
 			</a>
 			<xsl:if test="count(Zone)>0">
