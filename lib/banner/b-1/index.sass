@@ -1,5 +1,22 @@
 .vhs-banner-1
+	position: relative
+	.button-down
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+		bottom: .5rem
+		z-index: 11
 	.owl-carousel
+		.owl-nav
+			width: 100%
+			button
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				&.owl-prev
+					left: 12%
+				&.owl-next
+					right: 12%
 		.owl-dots
 			text-align: center
 			margin-top: 1rem
@@ -58,3 +75,28 @@
 								top: 50%
 								left: 50%
 								transform: translate(-50%,-50%)
+		.owl-stage-outer
+			.item
+				position: relative
+				.content
+					display: none
+					+media-breakpoint-up(lg)
+						display: block
+						position: absolute
+						top: 40%
+						left: 55%
+						transform: translateY(-50%)
+						width: 25%
+						h2
+							font-size: r(40px)
+							color: color-get($mau, main)
+						p
+							font-size: r(20px)
+							color: color-get($mau, main)
+				+media-breakpoint-up(xl)
+					.content
+						top: 35%
+						h2
+							font-size: r(72px)
+						p
+							font-size: r(24px)

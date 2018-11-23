@@ -1,0 +1,184 @@
+.vhs-contact-1
+	padding: r(40px) 0
+	.main-title
+		text-transform: initial
+		margin-bottom: 2rem
+	.description
+		font-size: r(13px)
+		color: lighten(black,20%)
+		text-align: center
+		margin-bottom: 2rem
+	.textbox
+		display: flex
+		margin-bottom: 25px
+		background: darken(white, 5%)
+		padding: 1rem
+		align-items: center
+		.img
+			width: 60px
+		.content
+			margin-left: 1.25rem
+			.title
+				font-weight: 600
+				color: color-get($mau, main)
+				font-size: r(18px)
+				margin-bottom: 1rem
+			p
+				font-size: r(12px)
+				margin-bottom: 0
+	+media-breakpoint-up(sm)
+		.description
+			font-size: r(16px)
+		.textbox
+			.img
+				width: 90px
+			.content
+				.title
+					font-size: r(22px)
+				p
+					font-size: r(15px)
+	+media-breakpoint-up(md)
+		.description
+			margin-bottom: 5rem
+		.textbox
+			position: relative
+			padding-top: r(55px)
+			margin-bottom: 0
+			.img
+				position: absolute
+				bottom: 100%
+				left: 50%
+				transform: translate(-50%, 50%)
+				height: 90px
+			.content
+				margin-left: 0
+				text-align: center
+				width: 100%
+				.title
+					font-size: r(20px)
+				p
+					font-size: r(14px)
+	+media-breakpoint-up(lg)
+		.description
+			margin-bottom: 5.75rem
+		.textbox
+			padding-left: 2rem
+			padding-right: 2rem
+			padding-top: 2rem
+			min-height: r(260px)
+			.img
+				width: 120px
+				height: 120px
+			.content
+				.title
+					font-size: r(22px)
+				p
+					font-size: r(15px)
+	.form
+		margin-top: 20px
+		+media-breakpoint-up(md)
+			margin-top: 50px
+		.map-wrap
+			iframe
+				width: 100%
+				min-height: 460px
+		.wrap-form
+			margin-top: 30px
+			+media-breakpoint-up(lg)
+				margin-top: 0
+			.form-wrap
+				.form-group
+					margin-bottom: 15px
+					position: relative
+					label
+						display: none
+					input
+						display: block
+						width: 100%
+						height: calc(2.25rem + 2px)
+						padding: .375rem .75rem
+						font-size: 1rem
+						color: #495057
+						height: 40px
+						border: 0
+						border-radius: 0
+						background: darken(white,4%)
+						padding-right: 20px
+						padding-left: 20px
+						outline: 0
+						&:focus
+							box-shadow: 0 0 .2rem color-get($mau, main)
+					textarea
+						display: block
+						width: 100%
+						height: calc(2.25rem + 2px)
+						padding: .375rem .75rem
+						font-size: 1rem
+						height: 150px
+						border: 0
+						border-radius: 0
+						background: darken(white,4%)
+						padding-right: 20px
+						padding-left: 20px
+						outline: 0
+						&:focus
+							box-shadow: 0 0 .2rem color-get($mau, main)
+					span
+						position: absolute
+						right: 30px
+						top: 13px
+						color: red
+						font-size: 0
+						&:before
+							font-size: 14px
+			.frm-captcha
+				display: flex
+				flex-direction: row
+				position: relative
+				margin-bottom: 1.75rem
+				.frm-captcha-input
+					max-width: 100%
+					flex: 1
+					padding-right: 15px
+					input
+						display: block
+						width: 100%
+						height: calc(2.25rem + 2px)
+						padding: .375rem .75rem
+						font-size: 1rem
+						color: #495057
+						height: 40px
+						border: 0
+						border-radius: 0
+						background: darken(white,4%)
+						padding-right: 20px
+						padding-left: 20px
+						outline: 0
+						&:focus
+							box-shadow: 0 0 .2rem color-get($mau, main)
+					label
+						display: none
+				.RadCaptcha_Default
+					width: 110px!important
+					span
+						position: absolute
+						left: 0
+					#ctl00_mainContent_ctl04_captcha_SpamProtectorPanel
+						img
+							height: 40px!important
+						a
+							display: none!important
+			.frm-btnwrap
+				label
+					display: none
+				.frm-btn
+					.btn
+						height: 40px
+						min-width: 110px
+						background: color-get($mau, main)
+						border: 0
+						color: white
+						border-radius: 0
+						text-transform: uppercase
+						&.frm-btn-reset
+							display: none

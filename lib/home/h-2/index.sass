@@ -6,12 +6,20 @@
 	position: relative
 	padding-top: 60px
 	padding-bottom: 100px
+	position: relative
+	.button-down
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+		bottom: 0
+		z-index: 11
 	+media-breakpoint-up(lg)
 		padding-top: r(100px)
 		padding-bottom: r(200px)
 	+media-breakpoint-up(xl)
 		padding-top: r(140px)
 		padding-bottom: r(295px)
+	+angle-img('../img/home/angle_1.png')
 	.content
 		.text
 			box-shadow: inset 0 0 0 2px color-get($mau, vang-2)

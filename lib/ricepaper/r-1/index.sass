@@ -1,0 +1,48 @@
+.ricepaper
+	background-image: -moz-linear-gradient( 90deg, rgb(0,129,64) 0%, rgb(51,176,73) 100%)
+	background-image: -webkit-linear-gradient( 90deg, rgb(0,129,64) 0%, rgb(51,176,73) 100%)
+	background-image: -ms-linear-gradient( 90deg, rgb(0,129,64) 0%, rgb(51,176,73) 100%)
+	padding-top: r(30px)
+	padding-bottom: r(30px)
+	+media-breakpoint-up(lg)
+		padding-top: r(60px)
+		padding-bottom: r(60px)
+	.content
+		h2
+			font-family: 'Cabin', sans-serif
+			font-weight: 600
+			text-align: center
+			color: white
+			font-size: r(32px)
+			margin-bottom: 28px
+			+media-breakpoint-up(sm)
+				font-size: r(40px)
+				margin-bottom: 35px
+			+media-breakpoint-up(lg)
+				font-size: r(48px)
+				margin-bottom: 42px
+		p
+			text-align: center
+			color: white
+			font-size: r(13px)
+			margin-bottom: 2rem
+			font-weight: 300
+			+media-breakpoint-up(sm)
+				font-size: r(15.5px)
+				margin-bottom: 2.5rem
+			+media-breakpoint-up(lg)
+				font-size: r(18px)
+				margin-bottom: 3rem
+
+	figure
+		margin-bottom: 0
+		text-align: center
+		margin-top: 2rem
+		+media-breakpoint-up(md)
+			margin-top: 2.5rem
+		+media-breakpoint-up(lg)
+			margin-top: 3rem
+		img
+			max-width: 100%
+			display: block
+			margin: auto

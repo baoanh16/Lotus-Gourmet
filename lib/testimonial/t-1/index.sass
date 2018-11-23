@@ -18,13 +18,16 @@
 				figure
 					.img-box
 						border-radius: 50%
-						width: r(330px)
-						height: r(330px)
 						display: flex
 						align-items: center
 						justify-content: center
 						overflow: hidden
 						margin: auto
+						width: r(240px)
+						height: r(240px)
+						+media-breakpoint-up(lg)
+							width: r(330px)
+							height: r(330px)
 						img
 							width: 100%
 					figcaption

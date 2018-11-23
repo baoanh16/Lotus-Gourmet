@@ -1,7 +1,88 @@
-.nuts-2, .nuts-3, .nuts-4, .nuts-5, .nuts-6
-	padding-top: 2rem
-	padding-bottom: 2rem
-	background: #000
+.nut
+	padding: 2rem 0
+	overflow: hidden
 	+media-breakpoint-up(lg)
-		padding-top: r(100px)
-		padding-bottom: r(50px)
+		overflow: initial
+		padding: 4rem 0
+	+media-breakpoint-up(xl)
+		min-height: 800px
+		display: flex
+		align-items: center
+	.figure
+		width: 100%
+		position: relative
+		img
+			z-index: 10
+			max-width: 450px
+			display: block
+			margin: auto
+			position: relative
+			+media-breakpoint-up(lg)
+				max-width: 100%
+				width: 100%
+		&:after
+			content: ''
+			position: absolute
+			width: 80%
+			height: 80%
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			+bg-rad
+			z-index: 9
+			+media-breakpoint-up(lg)
+				width: 125%
+				height: 125%
+	.content
+		display: flex
+		flex-direction: column
+		justify-content: center
+		height: 100%
+
+		h2
+			text-transform: uppercase
+			font-weight: 600
+			color: white
+			margin-bottom: 18px
+			font-size: r(32px)
+			+media-breakpoint-up(sm)
+				font-size: r(40px)
+				margin-bottom: 25px
+			+media-breakpoint-up(lg)
+				font-size: r(48px)
+				margin-bottom: 32px
+		p,ul,li
+			font-size: r(13px)
+			color: white
+			+media-breakpoint-up(sm)
+				font-size: r(15.5px)
+			+media-breakpoint-up(lg)
+				font-size: r(18px)
+		p,ul
+			margin-bottom: 20px
+		ul
+			list-style-type: none
+			li
+				position: relative
+				padding-left: 1.75rem
+				&:before
+					content: ''
+					position: absolute
+					top: 9px
+					width: 10px
+					height: 10px
+					border-radius: 50%
+					background: white
+					left: 0
+	&.reverse
+		+media-breakpoint-up(lg)
+			.row
+				flex-direction: row-reverse
+	&.nut-1
+		+angle-cl(#1d888e)
+	&.nut-2
+		+angle-cl(#6d0c42)
+	&.nut-3
+		+angle-cl(#144f7e)
+	&.nut-4
+		+angle-cl(#77a216)

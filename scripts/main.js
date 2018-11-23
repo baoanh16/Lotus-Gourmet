@@ -21,8 +21,11 @@ $(document).ready(function () {
 		smartSpeed: 1000,
 		autoplaySpeed: 1000,
 		autoplayTimeout: 3000,
+		nav: false,
+		navText: ['<img src="/Data/Sites/1/skins/default/img/sl_prev.png">','<img src="/Data/Sites/1/skins/default/img/sl_next.png">'],
 		responsive: {
 			992 : {
+				nav: true,
 				dots: true,
 			}
 		}
@@ -134,7 +137,7 @@ $(document).ready(function () {
 			500:{
 				items: 2
 			},
-			768: {
+			992: {
 				items: 3,
 			}
 		}

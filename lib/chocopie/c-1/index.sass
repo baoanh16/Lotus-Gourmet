@@ -1,23 +1,29 @@
 .chocopie-1
-	padding-top: 2rem
-	padding-bottom: 2rem
+	padding-top: r(35px)
+	padding-bottom: r(35px)
+	+angle-img('../img/chocopie/angle_section_2.png')
 	+media-breakpoint-up(lg)
-		padding-top: 4rem
-		padding-bottom: 4rem
-	.description
-		font-size: r(18px)
-		font-weight: 300
-		color: color-get($mau, den20)
-		text-align: justify
+		padding-top: r(75px)
+		padding-bottom: r(75px)
+	.chocopie-title
+		text-align: center
+		color: color-get($mau, main)
+		font-weight: 500
+		margin-bottom: r(20px)
+		font-size: r(32px)
 		+media-breakpoint-up(md)
-			text-align: center
-	.image
-		margin-top: r(50px)
-		figure
-			margin-bottom: 0
-			text-align: center
-			img
-				max-width: 100%
-				height: auto
+			font-size: r(40px)
 		+media-breakpoint-up(lg)
-			margin-top: r(94px)
+			font-size: r(48px)
+	.description
+		text-align: center
+		margin-bottom: r(30px)
+		font-size: r(14px)
+		+media-breakpoint-up(sm)
+			font-size: r(16px)
+			margin-bottom: r(60px)
+		+media-breakpoint-up(lg)
+			font-size: r(18px)
+			margin-bottom: r(90px)
+	.image
+		text-align: center

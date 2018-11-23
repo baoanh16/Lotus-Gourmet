@@ -8,6 +8,11 @@
 			<div class="owl-carousel">
 					<xsl:apply-templates select="/BannerList/Banner"></xsl:apply-templates>
 			</div>
+			<div class="button-down">
+				<div class="img">
+				<img src="/Data/Sites/1/skins/default/img/arrow_down_white.png" alt=""></img>
+				</div>
+			</div>
 		</section>
 	</xsl:template>
 
@@ -26,6 +31,14 @@
 					</xsl:attribute>
 				</img>
 			</a>
+			
+			<div class="content">
+				<h2>
+					<xsl:value-of select="Title"></xsl:value-of>
+				</h2>
+				<p>
+					<xsl:value-of select="Description"></xsl:value-of></p>
+			</div>
 		</div>
 	</xsl:template>
 </xsl:stylesheet>
