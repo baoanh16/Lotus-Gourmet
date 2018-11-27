@@ -91,6 +91,9 @@ $(document).ready(function () {
 		URLhashListener: true,
 		startPosition: 'URLHash',
 		loop: true,
+		dots: true,
+		dotsEach: 1,
+		loop: true,
 		responsive: {
 			576: {
 				items: 3,
@@ -188,19 +191,20 @@ $(document).ready(function () {
 		autoplayTimeout: 4000,
 		smartSpeed: 300,
 		loop: true,
+		nav: true,
+		navText: ['<span class="lnr lnr-arrow-left"></span>','<span class="lnr lnr-arrow-right"></span>'],
 		responsive: {
 			768: {
 				items: 3,
 				margin: -50,
 				mouseDrag: false,
-				smartSpeed: 500,
 				center: true,
 			},
 			992: {
 				items: 3,
+				center: true,
 				margin: -125,
 				smartSpeed: 700,
-				center: true,
 			}
 		}
 	})

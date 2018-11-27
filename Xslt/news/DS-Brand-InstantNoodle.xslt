@@ -9,7 +9,7 @@
 
 	<xsl:template match="News">
 		<xsl:if test="position()=1">
-			<section class="instantnoodle-1" bg-img="./img/instantnoodle/bg_1.png">
+			<section class="instantnoodle-1" bg-img="/Data/Sites/1/skins/default/img/instantnoodle/bg_1.png">
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-9 mx-auto">

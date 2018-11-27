@@ -8,7 +8,6 @@
 		min-height: 800px
 		display: flex
 		align-items: center
-	
 	.content
 		display: flex
 		flex-direction: column
@@ -18,7 +17,7 @@
 			font-family: 'Cabin', sans-serif
 			font-weight: 600
 			color: white
-			text-transform: uppercase
+			text-transform: capitalize
 			font-size: r(32px)
 			margin-bottom: 28px
 			+media-breakpoint-up(sm)
@@ -27,6 +26,7 @@
 			+media-breakpoint-up(lg)
 				font-size: r(48px)
 				margin-bottom: 42px
+				white-space: nowrap
 		p,ul,li
 			font-size: r(13px)
 			color: white
@@ -34,6 +34,7 @@
 				font-size: r(15.5px)
 			+media-breakpoint-up(lg)
 				font-size: r(18px)
+				line-height: 1.6
 		p,ul
 			margin-bottom: 20px
 		ul
@@ -50,3 +51,11 @@
 					border-radius: 50%
 					background: white
 					left: 0
+.juice-2, .juice-4, .juice-6
+	.content
+		+media-breakpoint-up(lg)
+			padding-left: 70px
+.juice-3, .juice-5
+	.content
+		+media-breakpoint-up(lg)
+			padding-right: 70px

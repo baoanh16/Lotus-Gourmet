@@ -22,6 +22,38 @@
 				z-index: -1
 			&.active
 				box-shadow: 0 0 0 2px color-get($mau, do-5) inset
+		.owl-carousel
+			.owl-dots
+				text-align: center
+				margin-top: 1rem
+				+media-breakpoint-up(md)
+					margin-top: 1.75rem
+				+media-breakpoint-up(lg)
+					margin-top: 2.25rem
+				.owl-dot
+					margin: 5px .5rem
+					span
+						display: block
+						width: 12px
+						height: 12px
+						border-radius: 50%
+						background: color-get($mau, main)
+					&.active
+						span
+							background: color-get($mau, do-2)
+							position: relative
+							&:before
+								content: ''
+								width: 17px
+								height: 17px
+								border-radius: 50%
+								border: 2px solid color-rgba(color-get($mau, do-2),.5)
+								position: absolute
+								top: 50%
+								left: 50%
+								transform: translate(-50%,-50%)
+					&:focus, &:active
+						outline: none
 	.slide-for
 		margin-bottom: r(20px)
 		.item

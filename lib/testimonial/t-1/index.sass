@@ -1,6 +1,35 @@
 .vhs-testimonial-1
 	padding: r(70px) 0
 	.owl-carousel
+		.owl-nav
+			button
+				position: absolute
+				top: 120px
+				transform: translateY(-50%)
+				width: 34px
+				height: 34px
+				border-radius: 50%
+				border: 1px solid color-get($mau, main)
+				display: flex
+				justify-content: center
+				align-items: center
+				span
+					color: color-get($mau, main)
+				&.owl-prev
+					left: 0
+				&.owl-next
+					right: 0
+				+media-breakpoint-up(sm)
+					&.owl-prev
+						left: calc(50% - 180px)
+					&.owl-next
+						right: calc(50% - 180px)
+				+media-breakpoint-up(lg)
+					top: 165px
+					&.owl-prev
+						left: calc(50% - 225px)
+					&.owl-next
+						right: calc(50% - 225px)
 		.owl-item
 			display: flex
 			align-items: center
