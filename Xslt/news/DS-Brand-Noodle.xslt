@@ -20,7 +20,7 @@
 			</xsl:attribute>
 			<xsl:if test="position() = 2">
 				<xsl:attribute name="class">
-					<xsl:text>noodle reversenoo-</xsl:text>
+					<xsl:text>noodle reverse noo-</xsl:text>
 					<xsl:value-of select="position()"></xsl:value-of>
 				</xsl:attribute>
 			</xsl:if>
@@ -46,11 +46,6 @@
 							<p>
 								<xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
 							</p>
-							<ul>
-								<li>Quick and easy to prepare</li>
-								<li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-								<li>Lorem ipsum dolor sit amet</li>
-							</ul>
 						</div>
 					</div>
 				</div>

@@ -21,6 +21,13 @@
 					<xsl:value-of select="Title"></xsl:value-of>
 				</xsl:attribute>
 			</img>
+			<div class="content">
+				<h2>
+					<xsl:value-of select="Title"></xsl:value-of>
+				</h2>
+				<p>
+					<xsl:value-of select="Description"></xsl:value-of></p>
+			</div>
 		</div>
 	</xsl:template>
 </xsl:stylesheet>

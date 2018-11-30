@@ -5,7 +5,8 @@
 	"main": "gulpfile.babel.js",
 	"scripts": {
 		"test": "test",
-		"start": "gulp"
+		"start": "gulp",
+		"compress": "gulp compress"
 	},
 	"repository": {
 		"type": "git",

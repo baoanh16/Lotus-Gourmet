@@ -149,16 +149,25 @@ $(document).ready(function () {
 	// Slide Trang Our Brand
 	$(".vhs-brand-2 .brand-detail .owl-carousel").owlCarousel({
 		items: 1,
-		animateIn: 'zoomIn',
+		animateIn: 'fadeIn',
+		animateOut: 'fadeOut',
 		mouseDrag: false,
 		dots: false,
-		// loop: true,
+		// rewind: true,
+		URLhashListener: true,
+	}).on('changed.owl.carousel', function(e){
+		var current = e.item.index;
+		$(".vhs-brand-2 .brand-nav .owl-carousel").trigger("to.owl.carousel", current);
 	});
+
 	$(".vhs-brand-2 .brand-nav .owl-carousel").owlCarousel({
 		items: 3,
 		center: true,
-		loop: false,
-		// autoplay: true,
+		loop: true,
+		dots: false,
+		nav: true,
+		navText: ['<span class="lnr lnr-chevron-left"></span>','<span class="lnr lnr-chevron-right"></span>'],
+		URLhashListener: true,
 		smartSpeed: 500,
 		autoplayTimeout: 4000,
 		autoplaySpeed: 500,
@@ -171,16 +180,16 @@ $(document).ready(function () {
 				items: 5,
 			}
 		}
-	}).on('changed.owl.carousel', function(e){
-		var current = e.item.index;
-		$(".vhs-brand-2 .brand-detail .owl-carousel").trigger("to.owl.carousel", current % e.item.count);
-		$(".vhs-brand-2 .brand-nav .owl-carousel").trigger("to.owl.carousel", current);
-	})
-	$(".vhs-brand-2 .brand-nav .owl-carousel .owl-item").on('click', function(){
-		var n = $(this).index()
-		$(".vhs-brand-2 .brand-detail .owl-carousel").trigger("to.owl.carousel", n);
+	}).on('click','owl-item', function(e){
+		var n = e.item.index;
 		$(".vhs-brand-2 .brand-nav .owl-carousel").trigger("to.owl.carousel", n);
 	})
+	// .on('changed.owl.carousel', function(e){
+	// 	var current = e.item.index;
+	// 	console.log(current)
+	// 	$(".vhs-brand-2 .brand-detail .owl-carousel").trigger("to.owl.carousel", current);
+	// })
+	
 
 
 	// Slide Trang Testimonial

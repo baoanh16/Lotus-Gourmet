@@ -140,6 +140,12 @@ export function jsProcess() {
 		.pipe(gulp.dest(paths.scripts.dest))
 }
 
+export function imageCompress(){
+	return gulp.src(paths.images.src)
+		.pipe(imagemin())
+		.pipe(gulp.dest(paths.images.dest))
+}
+
 function watchDist() {
 	browserSync.init({
 		server: {
@@ -168,9 +174,15 @@ const build = gulp.series(
 	jsProcess,
 	sassProcess,
 	pugProcess,
-	watchDist)
+	watchDist
+)
+	
+const compress = gulp.series(
+	imageCompress
+)
 export {
-	build
+	build,
+	compress
 }
 
 

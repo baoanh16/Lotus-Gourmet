@@ -146,13 +146,13 @@
 			</div>
 		</xsl:if>
 	</xsl:template>
-
+	
 	<xsl:template match="News" mode="AboutNews-3">
 		<xsl:if test="position()=1">
 			<xsl:text disable-output-escaping="yes">&lt;div class="col-lg-4 order-lg-3"&gt; &lt;div class="content"&gt;</xsl:text>
 			<div class="item">
 				<span class="number">
-					<xsl:value-of select="SubTitle"></xsl:value-of>
+					<xsl:value-of select="position()"></xsl:value-of>
 				</span>
 				<div class="img">
 					<img>
@@ -179,7 +179,7 @@
 			<xsl:text disable-output-escaping="yes">&lt;div class="col-lg-4 order-lg-1"&gt; &lt;div class="content"&gt;</xsl:text>
 			<div class="item">
 				<span class="number">
-					<xsl:value-of select="SubTitle"></xsl:value-of>
+					<xsl:value-of select="position()"></xsl:value-of>
 				</span>
 				<div class="img">
 					<img>
@@ -205,7 +205,7 @@
 		<xsl:if test="position()=3 or position()=5">
 			<div class="item">
 				<span class="number">
-					<xsl:value-of select="SubTitle"></xsl:value-of>
+					<xsl:value-of select="position()"></xsl:value-of>
 				</span>
 				<div class="img">
 					<img>
@@ -232,7 +232,7 @@
 		<xsl:if test="position()=2">
 			<div class="item">
 				<span class="number">
-					<xsl:value-of select="SubTitle"></xsl:value-of>
+					<xsl:value-of select="position()"></xsl:value-of>
 				</span>
 				<div class="img">
 					<img>

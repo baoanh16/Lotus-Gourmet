@@ -1,0 +1,29 @@
+.vhs-banner-2
+	.owl-carousel
+		.item
+			position: relative
+			.content
+				display: none
+				+media-breakpoint-up(lg)
+					position: absolute
+					height: 100%
+					top: 0
+					left: 50%
+					text-align: center
+					width: 45%
+					transform: translateX(-50%)
+					display: block
+					color: white
+					padding-top: 40px
+					text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2)
+					h2
+						font-size: 36px
+						font-weight: 700
+						margin-bottom: 1.5rem
+					p
+						font-size: 15px
+				+media-breakpoint-up(xl)
+					h2
+						font-size: 48px
+					p
+						font-size: 18px
