@@ -15,16 +15,16 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "^3.3.1",
-    "bootstrap": "^4.1.3",
+    "jquery": "3.3.1",
+    "bootstrap": "4.1.3",
     "offline": "0.7.19",
-    "mdi": "^3.0.39",
-    "linearicons": "^1.0.1",
-    "font-awesome": "^5.0.13",
-    "animate.css": "^3.5.2",
-    "k-sass-core": "^6.0.4",
-    "owl.carousel": "^2.3.4",
-    "fancybox": "^3.5.2",
+    "mdi": "3.0.39",
+    "linearicons": "1.0.1",
+    "font-awesome": "5.0.13",
+    "animate.css": "3.5.2",
+    "k-sass-core": "6.0.4",
+    "owl.carousel": "2.3.4",
+    "fancybox": "3.5.2",
     "slick-carousel": "1.8.0"
   }
 }

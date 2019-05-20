@@ -22,6 +22,27 @@
 				</xsl:attribute>
 				<xsl:value-of select="Title"></xsl:value-of>
 			</a>
+			<xsl:if test="count(Zone) > 0">
+				<div class="menu-dropdown">
+					<xsl:apply-templates select="Zone" mode="Child"></xsl:apply-templates>
+				</div>
+			</xsl:if>
 		</li>
+	</xsl:template>
+	<xsl:template match="Zone" mode="Child">
+		<a>
+		<xsl:attribute name="href">
+			<xsl:value-of select="Url"></xsl:value-of>
+		</xsl:attribute>
+		<xsl:attribute name="title">
+			<xsl:value-of select="Title"></xsl:value-of>
+		</xsl:attribute>
+		<xsl:if test="IsActive='true'">
+			<xsl:attribute name="class">
+			<xsl:text></xsl:text>
+			</xsl:attribute>
+		</xsl:if>
+		<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+		</a>
 	</xsl:template>
 </xsl:stylesheet>

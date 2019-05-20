@@ -1,90 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt"
+<xsl:stylesheet version="1.0"
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	xmlns:msxsl="urn:schemas-microsoft-com:xslt"
  exclude-result-prefixes="msxsl">
 	<xsl:output method="html" indent="yes" />
-
 	<xsl:template match="/">
-		<section class="vhs-brand-2">
-			<div class="container">
-				<div class="row">
-					<div class="col-12">
-						<div class="brand-detail">
-							<div class="owl-carousel">
-								<xsl:apply-templates select="/ZoneList/Zone" mode="ZoneDetail"></xsl:apply-templates>
-							</div>
-						</div>
-						<div class="brand-nav">
-							<div class="owl-carousel">
-								<xsl:apply-templates select="/ZoneList/Zone" mode="ZoneNav"></xsl:apply-templates>
-							</div>
-						</div>
-					</div>
+		<h2 class="main-title center">
+			<xsl:value-of disable-output-escaping="yes" select="/ZoneList/RootTitle"></xsl:value-of>
+		</h2>
+		<xsl:apply-templates select="/ZoneList/Zone"></xsl:apply-templates>
+	</xsl:template>
+	<xsl:template match="Zone">
+		<div class="row item">
+			<div class="col-lg-7">
+				<div class="imgbox">
+					<img class="lazyload">
+						<xsl:attribute name="src">
+							<xsl:value-of select="ImageUrl"></xsl:value-of>
+						</xsl:attribute>
+						<xsl:attribute name="alt">
+							<xsl:value-of select="Title"></xsl:value-of>
+						</xsl:attribute>
+					</img>
 				</div>
 			</div>
-		</section>
-	</xsl:template>
-
-	<xsl:template match="Zone" mode="ZoneDetail">
-		<div class="item animated">
-			<xsl:attribute name="data-hash">
-				<xsl:text>brand-</xsl:text>
-				<xsl:value-of select="position()"></xsl:value-of>
-			</xsl:attribute>
-			<figure>
-				<img>
-					<xsl:attribute name="src">
-						<xsl:value-of select="ImageUrl"></xsl:value-of>
-					</xsl:attribute>
-					<xsl:attribute name="alt">
-						<xsl:value-of select="Title"></xsl:value-of>
-					</xsl:attribute>
-				</img>
-				<figcaption class="row justify-content-center">
-					<div class="col-lg-8">
-						<h4>
-							<xsl:value-of select="Title"></xsl:value-of>
-						</h4>
-						<p>
-							<xsl:value-of select="Description"></xsl:value-of>
-						</p>
-							<a class="btn btn-viewmore">
-								<xsl:attribute name="href">
-									<xsl:value-of select="Url"></xsl:value-of>
-								</xsl:attribute>
-								<xsl:attribute name="target">
-									<xsl:value-of select="Target"></xsl:value-of>
-								</xsl:attribute>
-								View more
-							</a>
-					</div>
-				</figcaption>
-			</figure>
-		</div>
-	</xsl:template>
-
-	<xsl:template match="Zone" mode="ZoneNav">
-		<a class="item">
-				<xsl:attribute name="href">
-					<xsl:text>#brand-</xsl:text>
-					<xsl:value-of select="position()"></xsl:value-of>
-				</xsl:attribute>
-			<figure>
-				<div class="img-box">
-					<img>
-					<xsl:attribute name="src">
-						<xsl:value-of select="SecondImageUrl"></xsl:value-of>
-					</xsl:attribute>
-					<xsl:attribute name="alt">
-						<xsl:value-of select="Title"></xsl:value-of>
-					</xsl:attribute>
-				</img>
+			<div class="col-lg-5">
+				<div class="texbox">
+					<h2>
+						<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+					</h2>
+					<p>
+						<xsl:value-of disable-output-escaping="yes" select="Description"></xsl:value-of>
+					</p>
+					<a class="btn-viewmore" href="#">
+						<xsl:attribute name="href">
+							<xsl:value-of disable-output-escaping="yes" select="Url"></xsl:value-of>
+						</xsl:attribute>
+						View more
+					</a>
 				</div>
-				<figcaption>
-					<h4>
-						<xsl:value-of select="Title"></xsl:value-of>
-					</h4>
-				</figcaption>
-			</figure>
-		</a>
+			</div>
+		</div>
 	</xsl:template>
 </xsl:stylesheet>

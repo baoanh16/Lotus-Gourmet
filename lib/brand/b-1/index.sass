@@ -1,25 +1,36 @@
 .vhs-brand-1
 	background-image: url('../img/brand/bg_1.jpg')
-	background-repeat: no-repeat
-	background-size: cover
+	background-repeat: repeat-y
+	background-size: 100%
 	background-position: center
 	padding: r(90px) 0 r(120px) 0
-	+angle-img('../img/brand/angle_1.png')
-	.content
-		background: white
-		padding: 2rem 1rem 8rem 1rem
-		+media-breakpoint-up(lg)
-			padding: 5rem r(50px) 5rem r(170px)
-		position: relative
+	.item
+		align-items: center
+		text-align: center
+		margin-top: 30px
+		@media (min-width: 992px)
+			text-align: left
+			&:nth-child(even)
+				flex-direction: row-reverse
+		h2
+			font-size: 30px
+			color: #be1e2d
+			margin-bottom: 20px
 		p
-			font-size: r(16px)
-		img
-			position: absolute
-			transform: translate(-50%, -50%)
-			top: 100%
-			left: 50%
-			width: 180px
-			+media-breakpoint-up(lg)
-				top: 50%
-				left: 0
-				width: initial
+			font-size: 16px
+			color: #333333
+		.btn-viewmore
+			margin-top: 28px
+			background: #be1e2d
+			color: white
+			font-size: 14px
+			height: 30px
+			width: 100px
+			border-radius: 5px
+			display: flex
+			justify-content: center
+			align-items: center
+			font-family: 'Montserrat', sans-serif
+			margin: 18px auto 0 auto
+			@media (min-width: 992px)
+				margin: 18px 0 0 0

@@ -27,7 +27,8 @@
 		background: white
 		top: 80px
 		left: 0
-		height: calc(100vh - 80px)
+		bottom: 0
+		overflow-y: auto
 		width: 100%
 		max-width: 375px
 		transform: translateX(-100%)
@@ -47,6 +48,9 @@
 						font-size: r(16px)
 						font-weight: 500
 						color: color-get($mau, main)
+					.menu-dropdown
+						padding-left: 20px
+						background: rgba(black,.05)
 					&.active
 						a
 							color: color-get($mau, cam-2)
@@ -60,8 +64,9 @@
 					content: '\f5ad'
 
 	+media-breakpoint-up(lg)
-		>.container
-			position: relative
+		position: relative
+		padding-top: 0
+		padding-bottom: 0
 		.mobile
 			display: none
 		.logo
@@ -76,15 +81,19 @@
 			margin: 0 -10px
 			flex-wrap: wrap
 			max-width: 100%
+			overflow-y: visible
 			padding: 0
 			align-items: center
 			.main-menu
 				flex-basis: 0
 				flex-grow: 1
 				max-width: 100%
+				.Module-140
+					position: unset
 				.menu-list
-					padding: .5rem 3rem
+					padding: 0 3rem
 					flex-direction: row
+					position: initial
 					li
 						width: initial
 						a
@@ -92,8 +101,38 @@
 							color: white
 							font-size: 15px
 							font-weight: 400
-						&.active, &:hover
+							padding: 27px 0
+						.menu-dropdown
+							position: absolute
+							top: 100%
+							left: 0
+							background: white
+							width: 100%
+							display: flex
+							justify-content: center
+							display: none
 							a
+								color: map-get($mau, main)
+								padding: 20px 45px 20px 30px
+								position: relative
+								&:before
+									top: 50%
+									transform: translateY(-50%)
+									content: ''
+									position: absolute
+									left: 15px
+									width: 8px
+									height: 8px
+									background: map-get($mau, main)
+								&:hover
+									color: color-get($mau, cam-2)
+									&:before
+										background: color-get($mau, cam-2)
+						&:hover
+							.menu-dropdown
+								display: flex
+						&.active, &:hover
+							>a
 								color: color-get($mau, cam-2)
 		.language
 			margin-left: auto
@@ -133,7 +172,6 @@
 						font-size: 20px
 						padding: 0 5px
 	+media-breakpoint-up(xl)
-		padding: 9px 0
 		.logo
 			min-width: r(190px)
 			padding: 0
@@ -145,7 +183,7 @@
 		.navbar-wrap
 			.main-menu
 				.menu-list
-					padding: .5rem 120px .5rem 3rem
+					padding: 0 120px 0 3rem
 					li
 						a
 							font-size: 18px
