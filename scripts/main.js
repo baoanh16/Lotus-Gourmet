@@ -1,14 +1,13 @@
 // Toggle Menu Mobile
 let toggleMenu = () => {
-  x.toggle("active");
+	x.toggle("active");
 };
 let x = document.getElementById("vhs_header").classList;
 document.getElementById("vhs_toggleNavbar").onclick = toggleMenu;
 // End Toggle Menu
 
 $(document).ready(function () {
-
-	$('.canhcam-header-1 .search .mdi').on('click', function(e){
+	$('.canhcam-header-1 .search .mdi').on('click', function (e) {
 		e.stopPropagation();
 		$('.Module-141').slideToggle(300);
 	})
@@ -22,9 +21,9 @@ $(document).ready(function () {
 		autoplaySpeed: 1000,
 		autoplayTimeout: 3000,
 		nav: false,
-		navText: ['<img src="/Data/Sites/1/skins/default/img/sl_prev.png">','<img src="/Data/Sites/1/skins/default/img/sl_next.png">'],
+		navText: ['<img src="/Data/Sites/1/skins/default/img/sl_prev.png">', '<img src="/Data/Sites/1/skins/default/img/sl_next.png">'],
 		responsive: {
-			992 : {
+			992: {
 				nav: true,
 				dots: true,
 			}
@@ -36,7 +35,7 @@ $(document).ready(function () {
 		dots: true,
 		margin: 20,
 		nav: true,
-		navText: ['<img src="/Data/Sites/1/skins/default/img/arrow-left.png">','<img src="/Data/Sites/1/skins/default/img/arrow-right.png">'],
+		navText: ['<img src="/Data/Sites/1/skins/default/img/arrow-left.png">', '<img src="/Data/Sites/1/skins/default/img/arrow-right.png">'],
 		loop: true,
 		dots: false,
 		autoplay: true,
@@ -44,7 +43,7 @@ $(document).ready(function () {
 		autoplaySpeed: 1000,
 		autoplayTimeout: 3000,
 		responsive: {
-			576 : {
+			576: {
 				items: 2,
 			},
 			768: {
@@ -60,7 +59,7 @@ $(document).ready(function () {
 			530: {
 				items: 3
 			},
-			768 : {
+			768: {
 				items: 4
 			},
 			992: {
@@ -109,19 +108,19 @@ $(document).ready(function () {
 		dots: false,
 		nav: false,
 	})
-	$('.vhs-gallery-1 .slide-nav .item').each(function() {
-		$(this).on('click', function(){
+	$('.vhs-gallery-1 .slide-nav .item').each(function () {
+		$(this).on('click', function () {
 			$('.vhs-gallery-1 .slide-nav .item').not(this).removeClass('active')
 			$(this).addClass('active')
 		})
 	});
 
 	// Gallery toggle Side Menu
-	$('.vhs-gallery-1 .main-title').on('click', () =>{
+	$('.vhs-gallery-1 .main-title').on('click', () => {
 		$('.vhs-gallery-1 .gallery-side-menu').toggleClass('active')
 	})
 
-	$('.vhs-gallery-1 .gallery-side-menu .has-child').on('click', function(e){
+	$('.vhs-gallery-1 .gallery-side-menu .has-child').on('click', function (e) {
 		e.stopPropagation()
 		$(this).toggleClass('active')
 		$('.vhs-gallery-1 .gallery-side-menu .has-child').not(this).removeClass('active')
@@ -137,7 +136,7 @@ $(document).ready(function () {
 		dotsEach: 1,
 		margin: 20,
 		responsive: {
-			500:{
+			500: {
 				items: 2
 			},
 			992: {
@@ -155,7 +154,7 @@ $(document).ready(function () {
 		dots: false,
 		// rewind: true,
 		URLhashListener: true,
-	}).on('changed.owl.carousel', function(e){
+	}).on('changed.owl.carousel', function (e) {
 		var current = e.item.index;
 		$(".vhs-brand-2 .brand-nav .owl-carousel").trigger("to.owl.carousel", current);
 	});
@@ -166,7 +165,7 @@ $(document).ready(function () {
 		loop: true,
 		dots: false,
 		nav: true,
-		navText: ['<span class="lnr lnr-chevron-left"></span>','<span class="lnr lnr-chevron-right"></span>'],
+		navText: ['<span class="lnr lnr-chevron-left"></span>', '<span class="lnr lnr-chevron-right"></span>'],
 		URLhashListener: true,
 		smartSpeed: 500,
 		autoplayTimeout: 4000,
@@ -180,7 +179,7 @@ $(document).ready(function () {
 				items: 5,
 			}
 		}
-	}).on('click','owl-item', function(e){
+	}).on('click', 'owl-item', function (e) {
 		var n = e.item.index;
 		$(".vhs-brand-2 .brand-nav .owl-carousel").trigger("to.owl.carousel", n);
 	})
@@ -189,7 +188,7 @@ $(document).ready(function () {
 	// 	console.log(current)
 	// 	$(".vhs-brand-2 .brand-detail .owl-carousel").trigger("to.owl.carousel", current);
 	// })
-	
+
 
 
 	// Slide Trang Testimonial
@@ -201,7 +200,7 @@ $(document).ready(function () {
 		smartSpeed: 300,
 		loop: true,
 		nav: true,
-		navText: ['<span class="lnr lnr-arrow-left"></span>','<span class="lnr lnr-arrow-right"></span>'],
+		navText: ['<span class="lnr lnr-arrow-left"></span>', '<span class="lnr lnr-arrow-right"></span>'],
 		responsive: {
 			768: {
 				items: 3,
@@ -217,4 +216,12 @@ $(document).ready(function () {
 			}
 		}
 	})
+	AOS.init({
+		startEvent: 'DOMContentLoaded',
+		offset: 200, // offset (in px) from the original trigger point
+		delay: .5, // values from 0 to 3000, with step 50ms
+		duration: 600, // values from 0 to 3000, with step 50ms
+		easing: 'ease', // default easing for AOS animations
+		once: true
+	});
 });

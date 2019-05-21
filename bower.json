@@ -25,6 +25,7 @@
     "k-sass-core": "6.0.4",
     "owl.carousel": "2.3.4",
     "fancybox": "3.5.2",
-    "slick-carousel": "1.8.0"
+    "slick-carousel": "1.8.0",
+    "aos": "^2.3.4"
   }
 }

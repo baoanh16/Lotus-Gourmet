@@ -12,9 +12,9 @@
 	</xsl:template>
 	<xsl:template match="Zone">
 		<div class="row item">
-			<div class="col-lg-7">
+			<div class="col-lg-7" data-aos="fade-up-right">
 				<div class="imgbox">
-					<img class="lazyload">
+					<img>
 						<xsl:attribute name="src">
 							<xsl:value-of select="ImageUrl"></xsl:value-of>
 						</xsl:attribute>
@@ -24,7 +24,7 @@
 					</img>
 				</div>
 			</div>
-			<div class="col-lg-5">
+			<div class="col-lg-5" data-aos="fade-up-left">
 				<div class="texbox">
 					<h2>
 						<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>

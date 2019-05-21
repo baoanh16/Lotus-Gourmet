@@ -1,6 +1,8 @@
 .canhcam-header-1
-	position: sticky
+	position: fixed
 	top: 0
+	width: 100%
+	left: 0
 	background-color: color-get($mau, main)
 	z-index: 101
 	font-family: 'Cabin', sans-serif
@@ -52,7 +54,7 @@
 						padding-left: 20px
 						background: rgba(black,.05)
 						.item-dropdown
-							img
+							.item-img
 								display: none
 					&.active
 						a
@@ -67,9 +69,6 @@
 					content: '\f5ad'
 
 	+media-breakpoint-up(lg)
-		position: relative
-		padding-top: 0
-		padding-bottom: 0
 		.mobile
 			display: none
 		.logo
@@ -115,25 +114,25 @@
 							justify-content: center
 							display: none
 							.item-dropdown
-								// img
-								// 	display: block
-							a
+								.item-img
+									display: flex
+									width: 70px
+									height: 70px
+									margin: 0 auto
+									img
+										width: 100%
+										opacity: 0
+										transition: all .3s cubic-bezier(.2,.5,.5,.8)
+								&:hover
+									.item-img
+										img
+											opacity: 1
+							a.link
 								color: map-get($mau, main)
 								padding: 20px 45px 20px 30px
 								position: relative
-								&:before
-									top: 50%
-									transform: translateY(-50%)
-									content: ''
-									position: absolute
-									left: 15px
-									width: 8px
-									height: 8px
-									background: map-get($mau, main)
 								&:hover
 									color: color-get($mau, cam-2)
-									&:before
-										background: color-get($mau, cam-2)
 						&:hover
 							.menu-dropdown
 								display: flex
