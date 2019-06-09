@@ -3,11 +3,23 @@
 	background-repeat: repeat-y
 	background-size: 100%
 	background-position: center
-	padding: r(90px) 0 r(120px) 0
+	// padding: r(90px) 0 r(120px) 0
+	.section
+		@media (max-width: 991.98px)
+			padding-bottom: 20px
+		&:not(:last-child)
+			.fp-tableCell
+				padding-bottom: 120px
+		&:last-child
+			.fp-tableCell
+				padding-bottom: 222px
+		.fp-scroller
+			height: fit-content
+			padding-bottom: 122px
+				
 	.item
 		align-items: center
 		text-align: center
-		margin-top: 30px
 		@media (min-width: 992px)
 			text-align: left
 			&:nth-child(even)

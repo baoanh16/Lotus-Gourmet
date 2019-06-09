@@ -183,13 +183,6 @@ $(document).ready(function () {
 		var n = e.item.index;
 		$(".vhs-brand-2 .brand-nav .owl-carousel").trigger("to.owl.carousel", n);
 	})
-	// .on('changed.owl.carousel', function(e){
-	// 	var current = e.item.index;
-	// 	console.log(current)
-	// 	$(".vhs-brand-2 .brand-detail .owl-carousel").trigger("to.owl.carousel", current);
-	// })
-
-
 
 	// Slide Trang Testimonial
 	$(".vhs-testimonial-1 .owl-carousel").owlCarousel({
@@ -216,6 +209,17 @@ $(document).ready(function () {
 			}
 		}
 	})
+	$('.vhs-distribution-2 .col-20').on('mouseover', function () {
+		$(this).siblings('.col-20').not(this).css({
+			opacity: 0.5,
+			transition: "all .3s ease-out"
+		})
+	}).on('mouseout', function () {
+		$(this).siblings('.col-20').not(this).css({
+			opacity: 1,
+			transition: "all .3s ease-out"
+		})
+	})
 	AOS.init({
 		startEvent: 'DOMContentLoaded',
 		offset: 200, // offset (in px) from the original trigger point
@@ -224,4 +228,14 @@ $(document).ready(function () {
 		easing: 'ease', // default easing for AOS animations
 		once: true
 	});
+
+	if ($(window).width() >= 992) {
+		if ($('#fullpage').length > 0) {
+			$('footer').appendTo($('#fullpage .section').eq($('#fullpage .section').length - 1))
+			new fullpage('#fullpage', {
+				scrollOverflow: true,
+				licenseKey: 'A3DA879C-B1254377-8A906973-AAE812EA',
+			});
+		}
+	}
 });

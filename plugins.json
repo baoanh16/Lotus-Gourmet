@@ -1,27 +1,30 @@
 {
-	"styles": [
-		"bower_components/bootstrap/dist/css/bootstrap.min.css",
-		"bower_components/animate.css/animate.min.css",
-		"bower_components/fancybox/dist/jquery.fancybox.min.css",
-		"bower_components/font-awesome/web-fonts-with-css/css/fontawesome-all.min.css",
-		"bower_components/linearicons/dist/web-font/style.css",
-		"bower_components/mdi/css/materialdesignicons.min.css",
-		"bower_components/owl.carousel/dist/assets/owl.carousel.min.css",
-		"bower_components/owl.carousel/dist/assets/owl.theme.default.min.css",
-		"bower_components/offline/themes/offline-theme-default.css",
-		"bower_components/offline/themes/offline-language-english.css",
-		"bower_components/slick-carousel/slick/slick.css",
-		"bower_components/slick-carousel/slick/slick-theme.css",
-		"bower_components/aos/dist/aos.css"
-	],
-	"scripts":[
-		"bower_components/jquery/dist/jquery.min.js",
-		"bower_components/bootstrap/dist/js/bootstrap.bundle.min.js",
-		"bower_components/fancybox/dist/jquery.fancybox.min.js",
-		"bower_components/offline/offline.min.js",
-		"bower_components/owl.carousel/dist/owl.carousel.min.js",
-		"bower_components/slick-carousel/slick/slick.min.js",
-		"scripts/plugins/bigimg.js",
-		"bower_components/aos/dist/aos.js"
-	]
+    "styles": [
+        "bower_components/bootstrap/dist/css/bootstrap.min.css",
+        "bower_components/animate.css/animate.min.css",
+        "bower_components/fancybox/dist/jquery.fancybox.min.css",
+        "bower_components/font-awesome/web-fonts-with-css/css/fontawesome-all.min.css",
+        "bower_components/linearicons/dist/web-font/style.css",
+        "bower_components/mdi/css/materialdesignicons.min.css",
+        "bower_components/owl.carousel/dist/assets/owl.carousel.min.css",
+        "bower_components/owl.carousel/dist/assets/owl.theme.default.min.css",
+        "bower_components/offline/themes/offline-theme-default.css",
+        "bower_components/offline/themes/offline-language-english.css",
+        "bower_components/slick-carousel/slick/slick.css",
+        "bower_components/slick-carousel/slick/slick-theme.css",
+        "bower_components/aos/dist/aos.css",
+        "bower_components/fullpage.js/dist/fullpage.min.css"
+    ],
+    "scripts": [
+        "bower_components/jquery/dist/jquery.min.js",
+        "bower_components/bootstrap/dist/js/bootstrap.bundle.min.js",
+        "bower_components/fancybox/dist/jquery.fancybox.min.js",
+        "bower_components/offline/offline.min.js",
+        "bower_components/owl.carousel/dist/owl.carousel.min.js",
+        "bower_components/slick-carousel/slick/slick.min.js",
+        "scripts/plugins/bigimg.js",
+        "bower_components/aos/dist/aos.js",
+        "bower_components/fullpage.js/vendors/scrolloverflow.min.js",
+        "bower_components/fullpage.js/dist/fullpage.extensions.min.js"
+    ]
 }

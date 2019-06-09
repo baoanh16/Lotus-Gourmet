@@ -1,27 +1,28 @@
 .vhs-breadcrumb-1
-	.main-breadcrumb
-		.breadcrumb
-			background: darken(white, 3%)
-			justify-content: center
-			margin-bottom: 0
-			li
-				
+	position: relative
+	z-index: 90
+	.breadcrumb
+		background: darken(white, 3%)
+		justify-content: center
+		margin-bottom: 0
+		li
+			
+			a
+				font-size: 1rem
+				color: darken(white, 60%)
+				text-decoration: none
+				text-transform: capitalize
+			&:hover
 				a
-					font-size: 1rem
+					color: color-get($mau, main)
+			+ li
+				margin-left: r(24px)
+				position: relative
+				&:before
+					+linearicons('\e876')
+					font-size: r(14px)
+					position: absolute
 					color: darken(white, 60%)
-					text-decoration: none
-					text-transform: capitalize
-				&:hover
-					a
-						color: color-get($mau, main)
-				+ li
-					margin-left: r(24px)
-					position: relative
-					&:before
-						+linearicons('\e876')
-						font-size: r(14px)
-						position: absolute
-						color: darken(white, 60%)
-						top: 50%
-						transform: translateY(-50%)
-						left: -17px
+					top: 50%
+					transform: translateY(-50%)
+					left: -17px

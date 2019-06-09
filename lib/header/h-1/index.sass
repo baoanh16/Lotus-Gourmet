@@ -73,6 +73,7 @@
 			display: none
 		.logo
 			padding: 10px 0
+			position: relative
 		.navbar-wrap
 			position: initial
 			height: initial
@@ -114,19 +115,26 @@
 							justify-content: center
 							display: none
 							.item-dropdown
+								position: relative
 								.item-img
 									display: flex
-									width: 70px
-									height: 70px
+									width: 150px
+									height: 150px
 									margin: 0 auto
+									position: absolute
+									top: 100%
+									left: 50%
+									transform: translateX(-50%)
+									background: rgba(245,245,245,.9)
+									box-shadow: 0 0 12px rgba(black,.5)
+									padding: 15px
+									opacity: 0
 									img
 										width: 100%
-										opacity: 0
 										transition: all .3s cubic-bezier(.2,.5,.5,.8)
 								&:hover
 									.item-img
-										img
-											opacity: 1
+										opacity: 1
 							a.link
 								color: map-get($mau, main)
 								padding: 20px 45px 20px 30px
@@ -184,7 +192,8 @@
 				position: absolute
 				max-height: 100px
 				left: 10px
-				top: 0
+				top: 50%
+				transform: translateY(-38%)
 		.navbar-wrap
 			.main-menu
 				.menu-list
