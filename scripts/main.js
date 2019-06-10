@@ -209,13 +209,13 @@ $(document).ready(function () {
 			}
 		}
 	})
-	$('.vhs-distribution-2 .col-20').on('mouseover', function () {
-		$(this).siblings('.col-20').not(this).css({
+	$('.vhs-distribution-2 .item').on('mouseover', function () {
+		$(this).parent().siblings('.owl-item').find('.item').not(this).css({
 			opacity: 0.5,
 			transition: "all .3s ease-out"
 		})
 	}).on('mouseout', function () {
-		$(this).siblings('.col-20').not(this).css({
+		$(this).parent().siblings('.owl-item').find('.item').not(this).css({
 			opacity: 1,
 			transition: "all .3s ease-out"
 		})
@@ -238,4 +238,13 @@ $(document).ready(function () {
 			});
 		}
 	}
+
+	$('.vhs-distribution-2 .owl-carousel').owlCarousel({
+		items: 3,
+		margin: 30,
+		nav: false,
+		dots: false,
+	}).on('initialize.owl.carousel', function () {
+
+	})
 });
