@@ -242,9 +242,13 @@ $(document).ready(function () {
 	$('.vhs-distribution-2 .owl-carousel').owlCarousel({
 		items: 3,
 		margin: 30,
-		nav: false,
+		nav: true,
 		dots: false,
-	}).on('initialize.owl.carousel', function () {
-
+		autoplay: true,
+		loop: true,
+		smartSpeed: 1200,
+		autoplayTimeout: 3500,
+		autoplayHoverPause: false,
+		navText: ["<span class='lnr lnr-chevron-left'></span>","<span class='lnr lnr-chevron-right'></span>"]
 	})
 });
